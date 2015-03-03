@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBA88F6D-45AF-4AF1-9E1E-21E46068974A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intime.O2O.ApiClient</RootNamespace>
+    <AssemblyName>Intime.O2O.ApiClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DefaultApiClient.cs" />
+    <Compile Include="Domain\PropertyValue.cs" />
+    <Compile Include="Request\GetBrandByIdRequest.cs" />
+    <Compile Include="Domain\Detail.cs" />
+    <Compile Include="Domain\Head.cs" />
+    <Compile Include="Domain\OrderStatusResult.cs" />
+    <Compile Include="Domain\Payment.cs" />
+    <Compile Include="Request\GetBrandByIdRequestData.cs" />
+    <Compile Include="Request\GetOrderStatusByIdRequest.cs" />
+    <Compile Include="Request\GetProductImagesRequest.cs" />
+    <Compile Include="Request\GetProductImagesRequestData.cs" />
+    <Compile Include="Request\GetProductPropertiesRawRequest.cs" />
+    <Compile Include="Request\GetProductPropertiesRequest.cs" />
+    <Compile Include="Request\GetSectionByIdRequestData.cs" />
+    <Compile Include="Request\GetSectionByIdRequest.cs" />
+    <Compile Include="Request\GetSectionsRequestData.cs" />
+    <Compile Include="Request\GetSectionsRequest.cs" />
+    <Compile Include="Request\GetStoresRequestData.cs" />
+    <Compile Include="Request\GetStoresRequest.cs" />
+    <Compile Include="Request\GetProductsRequestData.cs" />
+    <Compile Include="IApiClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="Request\GetProductsRequest.cs" />
+    <Compile Include="Request\GetStoreByIdRequest.cs" />
+    <Compile Include="Request\GetStoreByIdRequestData.cs" />
+    <Compile Include="Request\OrderNotifyRequest.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="Domain\Brand.cs" />
+    <Compile Include="Response\GetOrderStatusByIdResponse.cs" />
+    <Compile Include="Response\GetProductImagesResponse.cs" />
+    <Compile Include="Response\GetSectionByIdResponse.cs" />
+    <Compile Include="Response\GetStoreByIdResponse.cs" />
+    <Compile Include="Response\GetSectionsResponse.cs" />
+    <Compile Include="Response\GetStoresResponse.cs" />
+    <Compile Include="Response\GetBrandByIdResponse.cs" />
+    <Compile Include="Response\GetProductsResponse.cs" />
+    <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\ProductImage.cs" />
+    <Compile Include="Domain\Section.cs" />
+    <Compile Include="Domain\Store.cs" />
+    <Compile Include="Domain\Supplier.cs" />
+    <Compile Include="Yintai\YintaiApiClient.cs" />
+    <Compile Include="Yintai\YintaiResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

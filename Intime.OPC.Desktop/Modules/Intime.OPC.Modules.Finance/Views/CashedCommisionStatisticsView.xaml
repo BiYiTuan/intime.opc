@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="Intime.OPC.Modules.Finance.Views.CashedCommisionStatisticsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resource/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Style="{StaticResource LayoutContainer}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" >
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="16" Height="16" >
+                        <Rectangle.Fill>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_magnify}" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock Margin="5,0,0,0">查询</TextBlock>
+                </StackPanel>
+            </GroupBox.Header>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="提取时间"/>
+                    <DatePicker SelectedDate="{Binding QueryCriteria.StartDate}" />
+                    <TextBlock Text="至" />
+                    <DatePicker SelectedDate="{Binding QueryCriteria.EndDate}" />
+                    <TextBlock Text="门店" />
+                    <ComboBox Width="150" Margin="0,0,0,0" ItemsSource="{Binding Stores}" Height="25"
+                          DisplayMemberPath="Value" SelectedValuePath="Key"
+                          SelectedValue="{Binding QueryCriteria.StoreId}" />
+                    <TextBlock Text="专柜码"/>
+                    <TextBox Width="150" Margin="0,0,0,0" Text="{Binding QueryCriteria.SectionCode}" Style="{StaticResource DefaultTextBoxStyle}" />
+                    <TextBlock Text="所属银行" />
+                    <ComboBox Width="150" Margin="0,0,0,0" ItemsSource="{Binding Banks}" Height="25"
+                          DisplayMemberPath="Name" SelectedValuePath="Code"
+                          SelectedValue="{Binding QueryCriteria.BankCode}" />
+                    <Button Command="{Binding QueryCommand}" Style="{StaticResource DefaultButtonStyle}" Content="查询">
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <DockPanel Grid.Row="1" >
+            <StackPanel DockPanel.Dock="Left">
+                <TextBlock Text="佣金明细" Style="{StaticResource DataGridName}"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal">
+                    <Button Command="{Binding ExportCommand}" Style="{DynamicResource MetroCircleButtonStyle}" Height="36" Width="36">
+                        <Rectangle Width="16" Height="16" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_redo_point}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                    </Button>
+                    <TextBlock Margin="0,0,5,0" HorizontalAlignment="Center">导出</TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+        <DataGrid Grid.Row="2" ItemsSource="{Binding StatisticsDtos, Mode=TwoWay}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="门店" Binding="{Binding StoreName}" />
+                <DataGridTextColumn Header="专柜名称" Binding="{Binding SectionName}" />
+                <DataGridTextColumn Header="专柜码" Binding="{Binding SectionCode}" />
+                <DataGridTextColumn Header="迷你银账号" Binding="{Binding MiniSilverNo}" />
+                <DataGridTextColumn Header="提取时间" Binding="{Binding PickUpDate}" />
+                <DataGridTextColumn Header="提取金额" Binding="{Binding PickUpAmount}"  ElementStyle="{StaticResource CellRight}"/>
+                <DataGridTextColumn Header="提取人" Binding="{Binding PickUpPerson}" />
+                <DataGridTextColumn Header="提取人联系方式" Binding="{Binding Contact}" />
+                <DataGridTextColumn Header="所属银行" Binding="{Binding BankName}" />
+                <DataGridTextColumn Header="银行卡号" Binding="{Binding BankCardNo}" />
+                <DataGridTextColumn Header="手续费" Binding="{Binding Fee}"  ElementStyle="{StaticResource CellRight}"/>
+                <DataGridTextColumn Header="税金" Binding="{Binding Taxes}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

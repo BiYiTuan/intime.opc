@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B34F0A0C-CEFC-4491-913C-C76EA6B05FBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intime.OPC.Service</RootNamespace>
+    <AssemblyName>Intime.OPC.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="Contract\IExpressService.cs" />
+    <Compile Include="Contract\IOrderService.cs" />
+    <Compile Include="Contract\ISalesOrderService.cs" />
+    <Compile Include="IAssociateService.cs" />
+    <Compile Include="IConnectProduct.cs" />
+    <Compile Include="IEnumService.cs" />
+    <Compile Include="Impl\AssociateService.cs" />
+    <Compile Include="Impl\ShopApplicationService.cs" />
+    <Compile Include="Impl\ExpressService.cs" />
+    <Compile Include="Impl\OrderService.cs" />
+    <Compile Include="Impl\SalesOrderService.cs" />
+    <Compile Include="IOrgService.cs" />
+    <Compile Include="IBrandService.cs" />
+    <Compile Include="IMenuService.cs" />
+    <Compile Include="IAccountService.cs" />
+    <Compile Include="IOrderService.cs" />
+    <Compile Include="IRoleService.cs" />
+    <Compile Include="ISaleRMAService.cs" />
+    <Compile Include="ISaleService.cs" />
+    <Compile Include="IService.cs" />
+    <Compile Include="IShippingSaleService.cs" />
+    <Compile Include="IShipViaService.cs" />
+    <Compile Include="IShopApplicationService.cs" />
+    <Compile Include="IStoreService.cs" />
+    <Compile Include="ITransService.cs" />
+    <Compile Include="MapConfig.cs" />
+    <Compile Include="Map\Mapper.cs" />
+    <Compile Include="IRmaService.cs" />
+    <Compile Include="Security\EncryptExtensions.cs" />
+    <Compile Include="Support\ConnectProduct.cs" />
+    <Compile Include="Support\EnumService.cs" />
+    <Compile Include="Support\OrgService.cs" />
+    <Compile Include="Support\BrandService.cs" />
+    <Compile Include="Support\MeunService.cs" />
+    <Compile Include="Support\AccountService.cs" />
+    <Compile Include="Support\OrderService.cs" />
+    <Compile Include="Support\RmaService.cs" />
+    <Compile Include="Support\RoleService.cs" />
+    <Compile Include="Support\SaleRMAService.cs" />
+    <Compile Include="Support\SaleService.cs" />
+    <Compile Include="Support\ShippingSaleService.cs" />
+    <Compile Include="Support\ShipViaService.cs" />
+    <Compile Include="Support\StoreService.cs" />
+    <Compile Include="Support\TransService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intime.OPC.Common\Intime.OPC.Common.csproj">
+      <Project>{120944ff-a829-4c64-b938-5af79875d747}</Project>
+      <Name>Intime.OPC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intime.OPC.Domain\00_Intime.OPC.Domain.csproj">
+      <Project>{03e03b5b-ead6-4e27-976d-82d15f7396d7}</Project>
+      <Name>00_Intime.OPC.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intime.OPC.Repository\01_Intime.OPC.Repository.csproj">
+      <Project>{6f89b48c-f608-4c24-968c-2646aca68d26}</Project>
+      <Name>01_Intime.OPC.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。启用“NuGet 程序包还原”可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

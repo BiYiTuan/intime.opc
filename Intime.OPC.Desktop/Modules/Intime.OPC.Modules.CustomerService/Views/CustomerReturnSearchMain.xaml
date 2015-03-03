@@ -1,0 +1,27 @@
+﻿<UserControl xmlns:Views="clr-namespace:Intime.OPC.Modules.CustomerService.Views" x:Class="Intime.OPC.Modules.CustomerService.Views.CustomerReturnSearchMain"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             Height="AUTO" Width="AUTO">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resource/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <TabControl  VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+            <TabItem Header="退货信息" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Views:CustomerReturnSearchCommon DataContext="{Binding CustomerReturnSearchRmaViewModel}" />
+            </TabItem>
+            <TabItem Header="物流退回" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Views:CustomerReturnSearchCommon DataContext="{Binding CustomerReturnSearchTransViewModel}" />
+            </TabItem>
+            <TabItem Header="退货赔偿退回" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Views:CustomerReturnSearchCommon DataContext="{Binding CustomerReturnSearchFinancialViewModel}" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

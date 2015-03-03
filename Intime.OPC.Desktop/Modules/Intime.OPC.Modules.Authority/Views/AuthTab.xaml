@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="OPCApp.Order.Views.AuthTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls"
+
+             xmlns:local="clr-namespace:Intime.OPC.Modules.Authority.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="700">
+    <Grid Background="#FFE5E5E5">
+
+        <Custom:MetroAnimatedTabControl Margin="0">
+            <TabItem Header="用户信息" Custom:ControlsHelper.HeaderFontSize="18">
+                <local:UserListWindow />
+            </TabItem>
+            <TabItem Header="角色信息" Custom:ControlsHelper.HeaderFontSize="18">
+                <local:RoleListWindow />
+            </TabItem>
+
+
+            <TabItem Header="用户和角色关联" Custom:ControlsHelper.HeaderFontSize="18">
+                <local:Role2UserListWindow />
+            </TabItem>
+
+        </Custom:MetroAnimatedTabControl>
+
+    </Grid>
+</UserControl>

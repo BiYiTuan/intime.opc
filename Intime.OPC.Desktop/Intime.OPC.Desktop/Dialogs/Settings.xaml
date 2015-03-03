@@ -1,0 +1,67 @@
+﻿<controls:Flyout x:Class="Intime.OPC.Desktop.Dialogs.Settings"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                Width="465" 
+                IsOpen="{Binding Path=IsFlyoutVisible, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                Header="设置">
+    <controls:Flyout.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </controls:Flyout.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="0" Grid.Row="0" Margin="20,5">
+                    <StackPanel>
+                        <TextBlock Width="80" Margin="0,5" Text="用户Key" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                        <TextBox  Width="420" HorizontalAlignment="Left" Text="{Binding Model.UserKey}" Style="{StaticResource DefaultTextBoxStyle}" />
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0" Margin="20,5">
+                    <StackPanel>
+                        <TextBlock Width="80" Margin="0,5" Text="口令" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                        <TextBox Width="420" HorizontalAlignment="Left" Text="{Binding Model.Password}" Style="{StaticResource DefaultTextBoxStyle}"  />
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0" Margin="20,5">
+                    <StackPanel>
+                        <TextBlock Width="80" Margin="0,5" Text="服务器地址" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                        <TextBox Width="420" HorizontalAlignment="Left" Text="{Binding Model.ServiceUrl}" Style="{StaticResource DefaultTextBoxStyle}" />
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="0" Margin="20,5">
+                    <StackPanel>
+                        <TextBlock Width="80" Margin="0,5" Text="版本号" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                        <TextBox Width="420" HorizontalAlignment="Left" Text="{Binding Model.Version}" Style="{StaticResource DefaultTextBoxStyle}"  />
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,20,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Command="{Binding SaveCommand}" Margin="5" Content="保存" Width="75" Style="{DynamicResource SquareButtonStyle}"/>
+                <Button Command="{Binding CancelCommand}" Content="取消" Width="75" Margin="5,5,25,5" Style="{DynamicResource SquareButtonStyle}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</controls:Flyout>

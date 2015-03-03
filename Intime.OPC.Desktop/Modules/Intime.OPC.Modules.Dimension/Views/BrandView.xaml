@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Intime.OPC.Modules.Dimension.Views.BrandView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="600" Width="400" Height="380">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resource/Style.xaml"/>
+                <ResourceDictionary Source="../Resource/Validation.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Margin="0,5,0,5">品牌名称:</TextBlock>
+            <TextBox Text="{Binding Path=Model.Name,Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{StaticResource DefaultTextBoxStyle}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock Margin="0,5,0,5">品牌英文名称:</TextBlock>
+            <TextBox Text="{Binding Path=Model.EnglishName,Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=True,UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{StaticResource DefaultTextBoxStyle}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock Margin="0,5,0,5">描述:</TextBlock>
+            <TextBox Text="{Binding Path=Model.Description,Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=True,UpdateSourceTrigger=PropertyChanged}" 
+                     TextWrapping="Wrap" AcceptsReturn="True" Height="72" VerticalScrollBarVisibility="Auto" Style="{StaticResource DefaultTextBoxStyle}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3">
+            <TextBlock Margin="0,5,0,5">供应商名称:</TextBlock>
+            <TextBox IsReadOnly="True" IsEnabled="False" Text="{Binding Path=Model.Supplier.Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource DefaultTextBoxStyle}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Margin="0,5,0,5">
+            <CheckBox IsChecked="{Binding Path=Model.Enabled,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">是否已启用</CheckBox>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=DataContext.OKCommand}" Style="{StaticResource DefaultButtonStyle}">确定</Button>
+            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=DataContext.CancelCommand}" Style="{StaticResource DefaultButtonStyle}">取消</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

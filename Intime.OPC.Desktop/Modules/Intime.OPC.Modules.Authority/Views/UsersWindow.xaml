@@ -1,0 +1,88 @@
+﻿<controls:MetroWindow x:Class="Intime.OPC.Modules.Authority.Views.UsersWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                      xmlns:Intime.OPC.CustomControls="clr-namespace:Intime.OPC.CustomControls;assembly=Intime.OPC.CustomControls"
+                      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      Title="用户管理" Height="400" Width="850" GlowBrush="Blue" Background="LightGray"
+                      ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <StackPanel Orientation="Horizontal" Background="LightGray">
+                <Button Background="LightGray" Width="Auto" Command="{Binding OkCommand}">
+                    <StackPanel>
+                        <Image Source="/Image/保存.png" Stretch="None" />
+                        <TextBlock FontFamily="宋体" FontSize="18" HorizontalAlignment="Center">确定</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Background="LightGray" Width="Auto" Command="{Binding CancelCommand}">
+                    <StackPanel>
+                        <Image Source="/Image/删除.png" Stretch="None" />
+                        <TextBlock FontFamily="宋体" FontSize="18" HorizontalAlignment="Center">取消</TextBlock>
+                    </StackPanel>
+                </Button>
+
+
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Margin="0,1">
+            <Label Content=" 查找字段:" Margin="0,14,0,10" />
+            <ComboBox Width="100" ItemsSource="{Binding FieldList}" Height="20" SelectedItem="{Binding SelectedFiled}"
+                      SelectedIndex="0" />
+            <Label Content=" 查找内容:" Margin="0,14,0,0" />
+            <TextBox Height="20" Width="130" Text="{Binding SelectedFiledValue}" />
+            <Button Background="LightGray" Width="50" Command="{Binding SearchCommand}">
+                <StackPanel>
+                    <Image Source="/image/查询.png" Stretch="None" />
+                    <TextBlock HorizontalAlignment="Center">查询</TextBlock>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+
+        <DataGrid x:Name="dataGrid" Grid.Row="2" MinWidth="600" Grid.Column="0" AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                  SelectedItem="{Binding CurModel}"
+                  ItemsSource="{Binding Path=ItemsSource,ElementName=dataPager}">
+            <!--<i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding DBGridClickCommand}" />
+                </i:EventTrigger>
+
+            </i:Interaction.Triggers>-->
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="选中" SortMemberPath="IsSelected" Width="60">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding Path=IsSelected,UpdateSourceTrigger=PropertyChanged}"
+                                      Command="{Binding Path=DataContext.CommandGetDown,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}"
+                                      VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="OrgId" Width="50" Binding="{Binding OrgId}" Visibility="Hidden" />
+                <DataGridTextColumn Header="authid" Visibility="Hidden" Width="150" Binding="{Binding DataAuthId}" />
+                <DataGridTextColumn Header="Id" Width="50" Binding="{Binding Id}" Visibility="Hidden" />
+                <DataGridTextColumn Width="100" Header="登录名" Binding="{Binding LogonName}" />
+                <DataGridTextColumn Header="密码" Visibility="Hidden" Width="80" Binding="{Binding Password}" />
+                <DataGridTextColumn Header="姓名" Width="150" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="所属机构" Width="150" Binding="{Binding DataAuthName}" />
+                <DataGridCheckBoxColumn Header="是否有效" Width="100" Binding="{Binding IsValid}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Intime.OPC.CustomControls:DataPager Grid.Row="3" Grid.Column="0" x:Name="dataPager" PageSizeList="10,20,30"
+                                        ItemsSource="{Binding PrResult.Models}"
+                                        Total="{Binding PrResult.Total}"
+                                        PageChanged="dataPager_PageChanged" />
+    </Grid>
+
+
+</controls:MetroWindow>

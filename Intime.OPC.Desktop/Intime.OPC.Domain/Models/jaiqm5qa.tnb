@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using OPCApp.Domain.Attributes;
+
+namespace OPCApp.Domain.Models
+{
+    [Uri("deliveryorder")]
+    public class OPC_ShippingSale : Model
+    {
+        /// <summary>
+        ///     ÍË»õµ¥ºÅ
+        /// </summary>
+        public string RmaNo { get; set; }
+
+        /// ¶©µ¥
+        public string OrderNo { get; set; }
+
+        public string SaleOrderNo { get; set; }
+
+        /// <summary>
+        /// 发货单号
+        /// </summary>
+        public string GoodsOutCode { get; set; }
+
+        /// <summary>
+        /// 快递单号
+        /// </summary>
+        public string ExpressCode { get; set; }
+
+        /// <summary>
+        ///     ·¢»õ×´Ì¬
+        /// </summary>
+        public string ShippingStatus { get; set; }
+
+        /// <summary>
+        ///     ÊÕ»õÈËÐÕÃû
+        /// </summary>
+        public string CustomerName { get; set; }
+
+        /// <summary>
+        ///     ÊÕ»õÈËµØÖ·
+        /// </summary>
+        public string CustomerAddress { get; set; }
+
+        /// <summary>
+        ///     ÊÕ»õÈËµç»°
+        /// </summary>
+        public string CustomerPhone { get; set; }
+
+        /// <summary>
+        ///     ·¢»õÊ±¼ä
+        /// </summary>
+        public DateTime GoodsOutDate { get; set; }
+
+        /// <summary>
+        ///     ·¢»õ·½Ê½
+        /// </summary>
+        public string GoodsOutType { get; set; }
+
+        /// <summary>
+        ///     ¿ìµÝ¹«Ë¾
+        /// </summary>
+        public string ShipCompanyName { get; set; }
+
+        /// <summary>
+        ///     ¿ìµÝÔ±
+        /// </summary>
+        public string ShipManName { get; set; }
+
+        /// <summary>
+        ///     ´òÓ¡×´Ì¬
+        /// </summary>
+        public string PrintStatus { get; set; }
+
+        /// <summary>
+        ///     ÓÊ±à
+        /// </summary>
+        public string ShippingZipCode { get; set; }
+
+        /// <summary>
+        /// 配送方式
+        /// </summary>
+        /// <value>The shipping method.</value>
+        public string ShippingMethod { get; set; }
+
+        /// <summary>
+        /// 支付快递公司快递费
+        /// </summary>
+        /// <value>The express fee.</value>
+        public double ShipViaExpressFee { get; set; }
+
+        /// <summary>
+        /// 快递费
+        /// </summary>
+        /// <value>The express fee.</value>
+        public double ExpressFee { get; set; }
+
+        public IList<OPC_Sale> SalesOrders { get; set; }
+    }
+}

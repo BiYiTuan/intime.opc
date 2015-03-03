@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6938948D-192F-473D-92BB-4AE97B115536}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intime.OPC.DataService</RootNamespace>
+    <AssemblyName>Intime.OPC.DataService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm">
+      <HintPath>..\Libraray\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraray\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\RestClient.cs" />
+    <Compile Include="Impl\Authority\OrganizationService.cs" />
+    <Compile Include="Impl\Authority\Role2MenuService.cs" />
+    <Compile Include="Impl\Authority\Role2UserService.cs" />
+    <Compile Include="Impl\Authority\AuthenticationService.cs" />
+    <Compile Include="Impl\Authority\MenuDataService.cs" />
+    <Compile Include="Impl\Authority\RoleService.cs" />
+    <Compile Include="Impl\CustomerService\CustomerGoodsReturnQueryService.cs" />
+    <Compile Include="Impl\Finance\PaymentVerificationService.cs" />
+    <Compile Include="Impl\Dimension\CommonInfo.cs" />
+    <Compile Include="Impl\Dimension\StoreService.cs" />
+    <Compile Include="Impl\LoginManager.cs" />
+    <Compile Include="Impl\RMA\MiniIntimeReturnService.cs" />
+    <Compile Include="Impl\RMA\PackageService.cs" />
+    <Compile Include="Impl\RMA\GoodsReturnService.cs" />
+    <Compile Include="Impl\CustomerService\CustomerGoodsReturnService.cs" />
+    <Compile Include="Impl\Logistics\RemarkService.cs" />
+    <Compile Include="Impl\CustomerService\CustomerInquiryService.cs" />
+    <Compile Include="Impl\Logistics\LogisticsService.cs" />
+    <Compile Include="Interface\Authority\IOrganizationService.cs" />
+    <Compile Include="Interface\Authority\IRole2MenuService.cs" />
+    <Compile Include="Interface\Authority\IRole2UserService.cs" />
+    <Compile Include="Interface\Authority\IAuthenticationService.cs" />
+    <Compile Include="Interface\Authority\IMenuDataService.cs" />
+    <Compile Include="Interface\CustomerService\ICustomerInquiryService.cs" />
+    <Compile Include="Interface\CustomerService\ICustomerGoodsReturnService.cs" />
+    <Compile Include="Interface\CustomerService\ICustomerGoodsReturnQueryService.cs" />
+    <Compile Include="Interface\Dimension\IStoreDataService.cs" />
+    <Compile Include="Interface\Authority\IRoleService.cs" />
+    <Compile Include="Interface\Finance\IPaymentVerificationService.cs" />
+    <Compile Include="Interface\IService\IRemark.cs" />
+    <Compile Include="Interface\RMA\QueryCriteria\GoodsReturnQueryCriteria.cs" />
+    <Compile Include="Interface\RMA\IMiniIntimeReturnService.cs" />
+    <Compile Include="Interface\RMA\IPackageService.cs" />
+    <Compile Include="Interface\RMA\IGoodsReturnService.cs" />
+    <Compile Include="Interface\Dimension\ICommonInfoService.cs" />
+    <Compile Include="Interface\Logistics\IRemarkService.cs" />
+    <Compile Include="Interface\Logistics\ILogisticsService.cs" />
+    <Compile Include="Interface\Logistics\RmaPost.cs" />
+    <Compile Include="Interface\RMA\QueryCriteria\MiniIntimeQueryCriteria.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\IPaging.cs" />
+    <Compile Include="Utilities\QueryExecutor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intime.OPC.ApiClient\Intime.OPC.ApiClient.csproj">
+      <Project>{d34916d5-ba8a-4a70-9a9c-2997289ef411}</Project>
+      <Name>Intime.OPC.ApiClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intime.OPC.Domain\Intime.OPC.Domain.csproj">
+      <Project>{153825c7-d458-4478-992f-3f1b1904f3a9}</Project>
+      <Name>Intime.OPC.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intime.OPC.Infrastructure\Intime.OPC.Infrastructure.csproj">
+      <Project>{55aa526e-1a89-4a8e-b648-8de5de2fd1e5}</Project>
+      <Name>Intime.OPC.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

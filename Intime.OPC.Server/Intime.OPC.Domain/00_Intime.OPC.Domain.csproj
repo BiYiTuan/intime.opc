@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03E03B5B-EAD6-4E27-976D-82D15F7396D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intime.OPC.Domain</RootNamespace>
+    <AssemblyName>Intime.OPC.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentMigrator">
+      <HintPath>..\packages\FluentMigrator.1.1.2.1\lib\40\FluentMigrator.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Auth\AuthUser.cs" />
+    <Compile Include="Auth\IAuthUser.cs" />
+    <Compile Include="Base\BaseRequest.cs" />
+    <Compile Include="Base\IEntity.cs" />
+    <Compile Include="BusinessModel\BrandFilter.cs" />
+    <Compile Include="BusinessModel\ShippingOrderFilter.cs" />
+    <Compile Include="BusinessModel\DateRangeFilter.cs" />
+    <Compile Include="BusinessModel\SaleOrderFilter.cs" />
+    <Compile Include="BusinessModel\SupplierFilter.cs" />
+    <Compile Include="BusinessModel\PageFilter.cs" />
+    <Compile Include="BusinessModel\SectionFilter.cs" />
+    <Compile Include="ConfigManager.cs" />
+    <Compile Include="DefinitionField.cs" />
+    <Compile Include="Dto\AssociateDto.cs" />
+    <Compile Include="Dto\BankDto.cs" />
+    <Compile Include="Dto\DepartmentDto.cs" />
+    <Compile Include="Dto\OrderTransactionDto.cs" />
+    <Compile Include="Dto\Request\ApplyInfoQueryCriteria.cs" />
+    <Compile Include="Dto\AssociateCommissionStatisticsReportDto.cs" />
+    <Compile Include="Dto\Request\AssociateCommissionStatisticsReportRequest.cs" />
+    <Compile Include="Dto\CashAssociateCommissionStatisticsReportDto.cs" />
+    <Compile Include="Dto\GiftCardSalesStatisticsReportDto.cs" />
+    <Compile Include="Dto\Request\BankQueryRequest.cs" />
+    <Compile Include="Dto\Request\GiftCardSalesStatisticsReportRequest.cs" />
+    <Compile Include="Dto\Request\CashAssociateCommissionStatisticsReportRequest.cs" />
+    <Compile Include="Dto\Request\DepartmentQueryRequest.cs" />
+    <Compile Include="Dto\Request\IStoreDataRoleRequest.cs" />
+    <Compile Include="Dto\Request\RmaQueryRequest.cs" />
+    <Compile Include="Dto\ExectueResult.cs" />
+    <Compile Include="Dto\Request\DatePageRequest.cs" />
+    <Compile Include="Dto\Request\SalesOrderCashRequest.cs" />
+    <Compile Include="Dto\Request\DeliveryOrderPrintRequest.cs" />
+    <Compile Include="Dto\Request\SetAssociateOperateRequest.cs" />
+    <Compile Include="Dto\Request\ShippingSaleOrderRequest.cs" />
+    <Compile Include="Dto\SalesOrderDto.cs" />
+    <Compile Include="Dto\SalesProductDetailDto.cs" />
+    <Compile Include="Dto\ShipViaDto.cs" />
+    <Compile Include="Dto\ShopApplicationDto.cs" />
+    <Compile Include="Dto\StoreDto.cs" />
+    <Compile Include="Enums\AssociateIncomeRequestStatus.cs" />
+    <Compile Include="Enums\InviteCodeRequestStatus.cs" />
+    <Compile Include="Enums\ComboType.cs" />
+    <Compile Include="Enums\DataStatus.cs" />
+    <Compile Include="Enums\InviteCodeRequestType.cs" />
+    <Compile Include="Enums\SortOrder\ApplySortOrder.cs" />
+    <Compile Include="Enums\UserLevel.cs" />
+    <Compile Include="Enums\OrderProductType.cs" />
+    <Compile Include="Enums\OrderType.cs" />
+    <Compile Include="Enums\ShippingOrderStatus.cs" />
+    <Compile Include="Enums\ShippingOrderType.cs" />
+    <Compile Include="Enums\SortOrder\OrderSortOrder.cs" />
+    <Compile Include="Enums\SortOrder\ShippingOrderSortOrder.cs" />
+    <Compile Include="Enums\SortOrder\SaleOrderSortOrder.cs" />
+    <Compile Include="Enums\SortOrder\StoreSortOrder.cs" />
+    <Compile Include="Exception\OpcApiException.cs" />
+    <Compile Include="Exception\RmaException.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\JsonExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Models\IMS_AssociateIncome.cs" />
+    <Compile Include="Models\IMS_AssociateIncomeHistory.cs" />
+    <Compile Include="Models\IMS_AssociateIncomeRequest.cs" />
+    <Compile Include="Models\IMS_Bank.cs" />
+    <Compile Include="Models\IMS_GiftCardOrder.cs" />
+    <Compile Include="Models\Mapping\IMS_AssociateIncomeHistoryMap.cs" />
+    <Compile Include="Models\Mapping\IMS_AssociateIncomeMap.cs" />
+    <Compile Include="Models\Mapping\IMS_AssociateIncomeRequestMap.cs" />
+    <Compile Include="Models\Mapping\IMS_BankMap.cs" />
+    <Compile Include="Models\Mapping\IMS_GiftCardOrderMap.cs" />
+    <Compile Include="Models\Mapping\ProductPropertyMapping.cs" />
+    <Compile Include="Models\Mapping\ResourcesMap.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\IMS_Associate.cs" />
+    <Compile Include="Models\IMS_AssociateBrand.cs" />
+    <Compile Include="Models\IMS_AssociateItems.cs" />
+    <Compile Include="Models\IMS_AssociateSaleCode.cs" />
+    <Compile Include="Models\IMS_GiftCard.cs" />
+    <Compile Include="Models\IMS_InviteCodeRequest.cs" />
+    <Compile Include="Models\IMS_SalesCode.cs" />
+    <Compile Include="Models\Mapping\DepartmentMap.cs" />
+    <Compile Include="Models\Mapping\IMS_AssociateBrandMap.cs" />
+    <Compile Include="Models\Mapping\IMS_AssociateItemsMap.cs" />
+    <Compile Include="Models\Mapping\IMS_AssociateMap.cs" />
+    <Compile Include="Models\Mapping\IMS_AssociateSaleCodeMap.cs" />
+    <Compile Include="Models\Mapping\IMS_GiftCardMap.cs" />
+    <Compile Include="Models\Mapping\IMS_InviteCodeRequestMap.cs" />
+    <Compile Include="Models\Mapping\IMS_SalesCodeMap.cs" />
+    <Compile Include="Models\Mapping\Supplier_BrandMap.cs" />
+    <Compile Include="Models\ProductProperty.cs" />
+    <Compile Include="Models\Resources.cs" />
+    <Compile Include="Partials\Models\OrderModel.cs" />
+    <Compile Include="Partials\Models\SalesOrderModel.cs" />
+    <Compile Include="Models\Supplier_Brand.cs" />
+    <Compile Include="PagerRequest.cs" />
+    <Compile Include="Dto\AuthUserDto.cs" />
+    <Compile Include="Dto\BrandDto.cs" />
+    <Compile Include="Dto\SupplierDto.cs" />
+    <Compile Include="Dto\Custom\FinaceDto.cs" />
+    <Compile Include="Dto\Custom\OutOfStockNotifyRequest.cs" />
+    <Compile Include="Dto\Custom\PackageReceiveDto.cs" />
+    <Compile Include="Dto\Custom\PackageVerifyRequest.cs" />
+    <Compile Include="Dto\Custom\ReturnGoodsInfoGet.cs" />
+    <Compile Include="Dto\Custom\ReturnGoodsGet.cs" />
+    <Compile Include="Dto\Custom\ReturnGoodsPay.cs" />
+    <Compile Include="Dto\Custom\RMARequest.cs" />
+    <Compile Include="Dto\Custom\ShoppingGuideRequest.cs" />
+    <Compile Include="Dto\Financial\SearchCashierRequest.cs" />
+    <Compile Include="Dto\Financial\SearchStatRequest.cs" />
+    <Compile Include="Dto\Financial\WebSiteBaseDto.cs" />
+    <Compile Include="Dto\Financial\WebSiteCashierSearchDto.cs" />
+    <Compile Include="Dto\Financial\ReturnGoodsStatDto.cs" />
+    <Compile Include="Dto\Financial\SaleDetailStatDto.cs" />
+    <Compile Include="Dto\OrderItemDto.cs" />
+    <Compile Include="Dto\Request\OrderQueryRequestDto.cs" />
+    <Compile Include="Dto\Request\SaleOrderDetailRequestDto.cs" />
+    <Compile Include="Dto\Request\SaleOrderQueryRequest.cs" />
+    <Compile Include="Dto\Request\ExpressRequestDto.cs" />
+    <Compile Include="Dto\RmaDetail.cs" />
+    <Compile Include="Dto\RMADto.cs" />
+    <Compile Include="Dto\RmaExpressDto.cs" />
+    <Compile Include="Dto\SaleRmaDto.cs" />
+    <Compile Include="Dto\SectionDto.cs" />
+    <Compile Include="Dto\ShippingSaleCreateDto.cs" />
+    <Compile Include="Dto\ShippingSaleDto.cs" />
+    <Compile Include="Dto\OrderDto.cs" />
+    <Compile Include="Dto\RoleMenuDto.cs" />
+    <Compile Include="Dto\RoleUserDto.cs" />
+    <Compile Include="Dto\SaleDetailDto.cs" />
+    <Compile Include="Dto\SaleDto.cs" />
+    <Compile Include="Dto\UserDto.cs" />
+    <Compile Include="Enums\EnumCashStatus.cs" />
+    <Compile Include="Enums\EnumOderStatus.cs" />
+    <Compile Include="Enums\EnumOrgType.cs" />
+    <Compile Include="Enums\EnumReturnGoodsStatus.cs" />
+    <Compile Include="Enums\EnumRMACashStatus.cs" />
+    <Compile Include="Enums\EnumRmaShippingStatus.cs" />
+    <Compile Include="Enums\EnumRMAStatus.cs" />
+    <Compile Include="Enums\EnumSaleOrderStatus.cs" />
+    <Compile Include="Enums\EnumSaleStatus.cs" />
+    <Compile Include="Enums\SortOrder\BrandSortOrder.cs" />
+    <Compile Include="Enums\SortOrder\SupplierSortOrder.cs" />
+    <Compile Include="Enums\SortOrder\SectionSortOrder.cs" />
+    <Compile Include="Exception\OrderNoIsNullException.cs" />
+    <Compile Include="Exception\OrderNotExistsException.cs" />
+    <Compile Include="Exception\PackageException.cs" />
+    <Compile Include="Exception\RoleNotExistsExcepion.cs" />
+    <Compile Include="Exception\SaleOrderNotExistsException.cs" />
+    <Compile Include="Exception\ShippingSaleNotExistsException.cs" />
+    <Compile Include="Exception\UserIdConverException.cs" />
+    <Compile Include="Exception\UserNotExistException.cs" />
+    <Compile Include="Exception\UserNotValidException.cs" />
+    <Compile Include="IPagedable.cs" />
+    <Compile Include="IPagedEnumerable.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Mapping\BrandMap.cs" />
+    <Compile Include="Models\Mapping\OPC_AuthMenuMap.cs" />
+    <Compile Include="Models\Mapping\OPC_AuthRoleMap.cs" />
+    <Compile Include="Models\Mapping\OPC_AuthRoleMenuMap.cs" />
+    <Compile Include="Models\Mapping\OPC_AuthRoleUserMap.cs" />
+    <Compile Include="Models\Mapping\OPC_AuthUserMap.cs" />
+    <Compile Include="Models\Mapping\OPC_ChannelProductMap.cs" />
+    <Compile Include="Models\Mapping\OPC_OrderCommentMap.cs" />
+    <Compile Include="Models\Mapping\OPC_OrgInfoMap.cs" />
+    <Compile Include="Models\Mapping\OPC_SaleRMACommentMap.cs" />
+    <Compile Include="Models\Mapping\OPC_RMACommentMap.cs" />
+    <Compile Include="Models\Mapping\OPC_RMADetailMap.cs" />
+    <Compile Include="Models\Mapping\OPC_RMALogMap.cs" />
+    <Compile Include="Models\Mapping\OPC_RMAMap.cs" />
+    <Compile Include="Models\Mapping\OPC_ShippingSaleCommentMap.cs" />
+    <Compile Include="Models\Mapping\OPC_SaleCommentMap.cs" />
+    <Compile Include="Models\Mapping\OPC_SaleDetailMap.cs" />
+    <Compile Include="Models\Mapping\OPC_SaleLogMap.cs" />
+    <Compile Include="Models\Mapping\OPC_SaleMap.cs" />
+    <Compile Include="Models\Mapping\OPC_SaleRMAMap.cs" />
+    <Compile Include="Models\Mapping\OPC_ShippingSaleMap.cs" />
+    <Compile Include="Models\Mapping\OPC_SKUMap.cs" />
+    <Compile Include="Models\Mapping\OPC_StockMap.cs" />
+    <Compile Include="Models\Mapping\OPC_StorePriorityMap.cs" />
+    <Compile Include="Models\Mapping\OPC_SupplierInfoMap.cs" />
+    <Compile Include="Models\Mapping\OrderItemMap.cs" />
+    <Compile Include="Models\Mapping\OrderMap.cs" />
+    <Compile Include="Models\Mapping\OrderTransactionMap.cs" />
+    <Compile Include="Models\Mapping\PaymentMethodMap.cs" />
+    <Compile Include="Models\Mapping\ProductMap.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Mapping\RMAItemMap.cs" />
+    <Compile Include="Models\Mapping\RMAMap.cs" />
+    <Compile Include="Models\Mapping\RMAReasonMap.cs" />
+    <Compile Include="Models\Mapping\SectionMap.cs" />
+    <Compile Include="Models\Mapping\ShipViaMap.cs" />
+    <Compile Include="Models\Mapping\StoreMap.cs" />
+    <Compile Include="Dto\Enums.cs" />
+    <Compile Include="Models\Mapping\UserMap.cs" />
+    <Compile Include="Models\OPC_SaleRMAComment.cs" />
+    <Compile Include="Models\OPC_RMAComment.cs" />
+    <Compile Include="Models\OPC_ShippingSale.cs" />
+    <Compile Include="Models\OPC_AuthMenu.cs" />
+    <Compile Include="Models\OPC_AuthRole.cs" />
+    <Compile Include="Models\OPC_AuthRoleMenu.cs" />
+    <Compile Include="Models\OPC_AuthRoleUser.cs" />
+    <Compile Include="Models\OPC_AuthUser.cs" />
+    <Compile Include="Models\OPC_ChannelProduct.cs" />
+    <Compile Include="Models\OPC_OrderComment.cs" />
+    <Compile Include="Models\OPC_OrgInfo.cs" />
+    <Compile Include="Models\OPC_RMA.cs" />
+    <Compile Include="Models\OPC_RMADetail.cs" />
+    <Compile Include="Models\OPC_RMALog.cs" />
+    <Compile Include="Models\OPC_Sale.cs" />
+    <Compile Include="Models\OPC_ShippingSaleComment.cs" />
+    <Compile Include="Models\OPC_SaleComment.cs" />
+    <Compile Include="Models\OPC_SaleDetail.cs" />
+    <Compile Include="Models\OPC_SaleLog.cs" />
+    <Compile Include="Models\OPC_SaleRMA.cs" />
+    <Compile Include="Models\OPC_SKU.cs" />
+    <Compile Include="Models\OPC_Stock.cs" />
+    <Compile Include="Models\OPC_StorePriority.cs" />
+    <Compile Include="Models\OPC_SupplierInfo.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\OrderTransaction.cs" />
+    <Compile Include="Models\PaymentMethod.cs" />
+    <Compile Include="Models\RMA.cs" />
+    <Compile Include="Models\RMAItem.cs" />
+    <Compile Include="Models\RMAReason.cs" />
+    <Compile Include="Models\Section.cs" />
+    <Compile Include="Models\ShipVia.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\YintaiHZhouContext.cs" />
+    <Compile Include="MyPrincipal .cs" />
+    <Compile Include="PageResult.cs" />
+    <Compile Include="PagerInfo.cs" />
+    <Compile Include="Partials\Models\Brand.cs" />
+    <Compile Include="Partials\Models\BrandClone.cs" />
+    <Compile Include="Partials\Models\IMS_SectionBrand.cs" />
+    <Compile Include="Partials\Models\Mapping\IMS_SectionBrandMap.cs" />
+    <Compile Include="Partials\Models\OpcSupplierInfo.cs" />
+    <Compile Include="Partials\Models\OpcSupplierInfoClone.cs" />
+    <Compile Include="Partials\Models\OPC_Sale.cs" />
+    <Compile Include="Partials\Models\OPC_SaleClone.cs" />
+    <Compile Include="Partials\Models\OPC_ShippingSale.cs" />
+    <Compile Include="Partials\Models\OPC_ShippingSaleClone.cs" />
+    <Compile Include="Partials\Models\OrderTransactionClone.cs" />
+    <Compile Include="Partials\Models\Section.cs" />
+    <Compile Include="Partials\Models\SectionClone.cs" />
+    <Compile Include="Partials\Models\ShippingOrderModel.cs" />
+    <Compile Include="Partials\Models\Store.cs" />
+    <Compile Include="Partials\Models\StoreClone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="CodeTemplates\ReverseEngineerCodeFirst\Context.tt" />
+    <None Include="CodeTemplates\ReverseEngineerCodeFirst\Entity.tt" />
+    <None Include="CodeTemplates\ReverseEngineerCodeFirst\Mapping.tt" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。启用“NuGet 程序包还原”可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

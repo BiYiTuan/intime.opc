@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="Intime.OPC.Modules.Dimension.Views.CounterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i ="http://schemas.microsoft.com/expression/2010/interactivity"
+            xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:mvvm="clr-namespace:Intime.OPC.Infrastructure.Mvvm;assembly=Intime.OPC.Infrastructure"
+             mc:Ignorable="d"  Width="506.97" Height="490">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadDimesionsCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resource/Style.xaml"/>
+                <ResourceDictionary Source="../Resource/Validation.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="184"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,5,0,5">专柜名称:</TextBlock>
+        <TextBox Height="25" Grid.Row="0" Grid.Column="1" 
+                 Text="{Binding Path=Model.Name,Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=True,UpdateSourceTrigger=PropertyChanged}"
+                 Style="{StaticResource DefaultTextBoxStyle}"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="0,5,0,5">专柜码:</TextBlock>
+        <TextBox Height="25"  Grid.Row="1" Grid.Column="1" 
+                 Text="{Binding Path=Model.Code, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}"
+                 Style="{StaticResource DefaultTextBoxStyle}"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="0,5,0,5">销售区域:</TextBlock>
+        <TextBox Height="25"  Grid.Row="2" Grid.Column="1" 
+                 Text="{Binding Path=Model.AreaCode, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}"
+                 Style="{StaticResource DefaultTextBoxStyle}"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="0,5,0,5">联系电话:</TextBlock>
+        <TextBox Height="25"  Grid.Row="3" Grid.Column="1" 
+                 Text="{Binding Path=Model.ContactPhoneNumber, ValidatesOnExceptions=true, NotifyOnValidationError=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 Style="{StaticResource DefaultTextBoxStyle}"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="0,5,0,5">管理部门:</TextBlock>
+        <TextBox Height="25"  Grid.Row="4" IsReadOnly="True" IsEnabled="False" Grid.Column="1" 
+                 Text="{Binding Path=Model.Organization.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Margin="0,5,0,5">所属门店:</TextBlock>
+        <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+            <TextBox x:Name="storeName" 
+                 Style="{StaticResource DefaultTextBoxStyle}" Width="185" HorizontalAlignment="Left" controls:TextboxHelper.Watermark="在此输入进行过滤">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TextChanged">
+                        <i:InvokeCommandAction Command="{Binding FilterStoreCommand}" CommandParameter="{Binding ElementName=storeName, Path=Text}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </TextBox>
+            <ComboBox Margin="10,0,0,0" x:Name="stores" ItemsSource="{Binding Stores}"
+                  Height="25" Width="230" IsDropDownOpen="{Binding IsFilteringStore}" DisplayMemberPath="Name"
+                  SelectedItem="{Binding Model.Store, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged}">
+            </ComboBox>
+        </StackPanel>
+        <TextBlock Grid.Row="6" Grid.Column="0"  Margin="0,5,0,5">销售品牌:</TextBlock>
+        <StackPanel Grid.Row="6" Grid.Column="1" Margin="0,3,0,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="brandName" Width="150" Margin="0,0,5,0"/>
+                <Button Command="{Binding LoadBrandsCommand}" CommandParameter="{Binding ElementName=brandName, Path=Text}" >查询</Button>
+            </StackPanel>
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,5,0,0" Height="150" 
+                ItemsSource="{Binding Path=Brands,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                mvvm:ScrollingBehavior.IsEnabled="True"
+                mvvm:ScrollingBehavior.ScrollToBottomCommand="{Binding LoadMoreBrandsCommand}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Path=Name}" Command="{Binding DataContext.SelectBrandCommand, RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Id}"  IsChecked="{Binding Path=IsSelected, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></CheckBox>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <CheckBox Grid.Row="7" Grid.Column="1"  Margin="5,5,0,5" IsChecked="{Binding Path=Model.Repealed,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">是否已撤柜</CheckBox>
+        <StackPanel Grid.Row="8" Grid.ColumnSpan="2"  Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Style="{StaticResource DefaultButtonStyle}" Command="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=DataContext.OKCommand}">确定</Button>
+            <Button Style="{StaticResource DefaultButtonStyle}" Command="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=DataContext.CancelCommand}">取消</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

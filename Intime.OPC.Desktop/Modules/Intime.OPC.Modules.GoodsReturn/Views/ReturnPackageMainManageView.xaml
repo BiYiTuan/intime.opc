@@ -1,0 +1,35 @@
+﻿<UserControl xmlns:Views="clr-namespace:Intime.OPC.Modules.GoodsReturn.Views"
+             xmlns:View="clr-namespace:Intime.OPC.Modules.GoodsReturn.View"
+             x:Class="Intime.OPC.Modules.GoodsReturn.View.ReturnPackageMainManageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             Height="Auto" Width="Auto">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resource/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <TabControl  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <TabItem Header="退货包裹签收确认" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <View:ReturnPackageManageView DataContext="{Binding ReturnPackageManageViewModel}" />
+            </TabItem>
+            <TabItem Header="退货包裹审核" DataContext="{Binding ReturnPackageVerifyViewViewModel}"
+                      HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <View:ReturnPackageVerifyView />
+            </TabItem>
+            <TabItem Header="包裹退回-打印快递单"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <View:ReturnPackagePrintExpressageView DataContext="{Binding ReturnPackagePrintExpressViewModel}" />
+            </TabItem>
+            <TabItem Header="包裹退回-快递交接" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <View:ReturnPackagePrintExpressageConnectView
+                    DataContext="{Binding ReturnPackagePrintConnectViewModel}" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

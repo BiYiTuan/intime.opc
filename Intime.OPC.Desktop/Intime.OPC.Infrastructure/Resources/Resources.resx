@@ -1,0 +1,1711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProcessName" xml:space="preserve">
+    <value>IDVault</value>
+    <comment>The name of our running process that the BHO uses for communication</comment>
+  </data>
+  <data name="SupportContactString" xml:space="preserve">
+    <value>If the problem persists, click on your Protection Suite  icon, select '?'  then ‘Support’</value>
+    <comment>contact info for customer support for error messages</comment>
+  </data>
+  <data name="BHONotEnabledFmt" xml:space="preserve">
+    <value>You must enable {0} in Internet Explorer to add Other Accounts. 
+
+To do this, select 'Tools/Internet Options/Programs/Manage add-ons' and make sure {0} Protection Suite is set to enabled.</value>
+    <comment>Our BHO is not enabled. {0} = partner-specific short app display name</comment>
+  </data>
+  <data name="ThirdPartyExtensionsNotEnabled" xml:space="preserve">
+    <value>Browser integration and protection is not enabled in Internet Explorer. Navigate to 'Tools/Internet Options/Advanced' and ensure that the option 'Enable third party browser extensions*' is checked.</value>
+    <comment>Third party extensions in IE not enabled.</comment>
+  </data>
+  <data name="SupportWebPage" xml:space="preserve">
+    <value>http://www.idvault.com/support/</value>
+  </data>
+  <data name="S_SecureViewSaveAsDlgTile" xml:space="preserve">
+    <value>Save As - Secure View</value>
+  </data>
+  <data name="SoftwareUpdate_Browser_IE" xml:space="preserve">
+    <value>Internet Explorer</value>
+    <comment>Appears in software update to indicate that IE browser is running. Must have CRLF at end of it.</comment>
+  </data>
+  <data name="SoftwareUpdate_Browser_SecureViewFmt" xml:space="preserve">
+    <value>{0} Secure View</value>
+    <comment>Appears in software update to indicate that Secure View browser is running. Must have CRLF at end of it.</comment>
+  </data>
+  <data name="SecurityUpdateBrowserRunningReadyFmt" xml:space="preserve">
+    <value>An important security update is ready to install.
+
+During the update, {0} will be closed.
+</value>
+    <comment>This message appears when the software update is available and only one type of browser is running.</comment>
+  </data>
+  <data name="SecurityUpdateReady" xml:space="preserve">
+    <value>An important security update is ready to install.</value>
+    <comment>This message appears when the software update is available and no browser is running.</comment>
+  </data>
+  <data name="SoftwareUpdateBrowsersRunningReadyFmt" xml:space="preserve">
+    <value>{0}
+
+During the update, the following applications must be closed:
+
+{2}
+Please close these applications or click OK to close them automatically.</value>
+    <comment>This message appears when the software update is available and more than one type of browser is running and the max postpone count has been reached. {0}=msg from DB, {2}=browsers open.</comment>
+  </data>
+  <data name="SoftwareUpdateDefaultMsgFmt" xml:space="preserve">
+    <value>{0} has detected that a software update is available.</value>
+    <comment>Default message in case we can't retrieve the message from the database.</comment>
+  </data>
+  <data name="SoftwareUpdateNoBrowsersRunningAskToBeginNowFmt" xml:space="preserve">
+    <value>{0}
+
+Are you ready to begin the {1} software update?</value>
+    <comment>This message appears when the software update is available and no browsers are running and the max postpone count hasn't been reached. It provides 2 options... Yes to start the update and Not Now to postpone it until later. {0}=msg from DB</comment>
+  </data>
+  <data name="SoftwareUpdateTitleFmt" xml:space="preserve">
+    <value>{0} Software Update</value>
+    <comment>Title of the window that appears when software update is available.</comment>
+  </data>
+  <data name="SoftwareDownloadAlreadyInProgress" xml:space="preserve">
+    <value>A software download is already in progress.</value>
+    <comment>Message displayed when the download has already been started.</comment>
+  </data>
+  <data name="S_SecurityUpdateSuccessful" xml:space="preserve">
+    <value>{0} Security Update successful</value>
+    <comment>This message appears when the installer is complete and not in silent mode.</comment>
+  </data>
+  <data name="ErrorMsgOutOfMemoryFmt" xml:space="preserve">
+    <value>Windows is running out of memory and must close {0}.
+
+You may need to restart Windows or close programs to free enough memory to run {0}.
+
+{1}</value>
+    <comment>This message appears when an OutOfMemoryException occurs and the app is closed.</comment>
+  </data>
+  <data name="ErrorMsgUnexpectedErrorFmt" xml:space="preserve">
+    <value>An unexpected error occurred. {0} will restart automatically.
+
+{1}</value>
+    <comment>This message appears when an unexpected exception occurs and the app is closed.</comment>
+  </data>
+  <data name="ErrorTitleFmt" xml:space="preserve">
+    <value>{0} Error</value>
+    <comment>Title of error message box includes application name.</comment>
+  </data>
+  <data name="ErrorInsufficientMemoryToWriteToTokenFmt" xml:space="preserve">
+    <value>The destination {0} is nearly full with account information, so the {1} cannot be completed.  Please use another {0} to complete the {1}.</value>
+    <comment>This message is shown when trying to write to a token if there isn't enough room for the data to be written.</comment>
+  </data>
+  <data name="ErrorRestoreToBackupFmt" xml:space="preserve">
+    <value>Restore cannot be performed to an {0} for Backup. Please insert a regular {0} now.</value>
+    <comment>This message is shown when tryng to do a backup to a non-backup token.</comment>
+  </data>
+  <data name="ErrorSameTokenFmt" xml:space="preserve">
+    <value>You must {1} to a different {0}. Please use a different {0} to complete the {1}.</value>
+    <comment>This message is shown when trying to backup or restore to the same token.</comment>
+  </data>
+  <data name="ErrorTokenNotEmptyQueryFmt" xml:space="preserve">
+    <value>The {0} you are using for {1} already contains secure account information. If you continue, this information will be overwritten.
+
+Are you sure you want to continue?</value>
+    <comment>This message appears when trying to backup or restore to a token with data already on it.</comment>
+  </data>
+  <data name="ErrorTokenNotInitializedFmt" xml:space="preserve">
+    <value>This {0} must be activated prior to using it.</value>
+    <comment>This message is shown when an uninitialized token is inserted.</comment>
+  </data>
+  <data name="PrintBackupCompletedFmt" xml:space="preserve">
+    <value>Your {0} Backup Report has been sent to the printer.  Please keep this report in a safe place.</value>
+    <comment>This message appears when print backup completes successfully.</comment>
+  </data>
+  <data name="PrintBackupTokenEmptyFmt" xml:space="preserve">
+    <value>Your {0} does not contain any account information to be backed up.</value>
+    <comment>This message is shown when no data is on a token when printing a backup.</comment>
+  </data>
+  <data name="PrintBackupWindowTitleFmt" xml:space="preserve">
+    <value>{0} Backup Report</value>
+    <comment>Title of windows for print backup messages</comment>
+  </data>
+  <data name="TokenCommandPrintBackup" xml:space="preserve">
+    <value>Print Backup</value>
+    <comment>Name of singleton command when performing print operation.</comment>
+  </data>
+  <data name="ToastErrRegularTokenNotInitializedFmt" xml:space="preserve">
+    <value>This {0} must be activated prior to using it.</value>
+    <comment>Message shown in the toast when an uninitialized token is inserted.</comment>
+  </data>
+  <data name="ErrCorruptDataStore" xml:space="preserve">
+    <value>There is a problem with accessing the list of Trusted Network Secure Financial Institutions.  This is being updated for you.  Please try again in a few minutes.</value>
+  </data>
+  <data name="ErrInitAppTitleFmt" xml:space="preserve">
+    <value>{0} Initialization</value>
+  </data>
+  <data name="ErrInitCryptokiInitializationFailedFmt" xml:space="preserve">
+    <value>The Smart Card library couldn't be initialized. {0} will now stop. To resolve this problem, please restart your PC.
+
+{1}</value>
+  </data>
+  <data name="ErrInitRegisterBrowserHooksFmt" xml:space="preserve">
+    <value>Browser integration and protection may not be setup correctly.
+
+Uninstall {0}, then install the latest {0} software from http://www.idvault.com/support to repair its setup.
+
+{1}</value>
+  </data>
+  <data name="ErrInitRegisterFileExtention" xml:space="preserve">
+    <value>Desktop integration may not be setup correctly.  Opening accounts may only work from the {0} Accounts menu on the Task bar. 
+Uninstall {0}, then install the latest {0} software from http://www.idvault.com/support to repair its setup.
+
+{1}</value>
+  </data>
+  <data name="ErrInitSmartcardServiceFailedFmt" xml:space="preserve">
+    <value>The Windows Smart Card service could not be started. This service is required to access {0}.  {0} will now stop.
+
+{1}</value>
+  </data>
+  <data name="ErrInitTokenReturnedWrongTypeFmt" xml:space="preserve">
+    <value>{0} cannot be initialized. Please remove {0} and insert it again.</value>
+  </data>
+  <data name="NotifyTipAccessingTokenFmt" xml:space="preserve">
+    <value>Accessing {0}</value>
+    <comment>Tool tip that appears over icon in system tray when accessing the inserted token.</comment>
+  </data>
+  <data name="NotifyTipActivatingTokenFmt" xml:space="preserve">
+    <value>Activating {0}</value>
+    <comment>Tool tip that appears over icon in system tray when the inserted token is being activated.</comment>
+  </data>
+  <data name="NotifyTipLockedRegularTokenFmt" xml:space="preserve">
+    <value>Locked {0}</value>
+    <comment>Tool tip that appears over icon in system tray when regular token is locked.</comment>
+  </data>
+  <data name="NotifyTipUnlockedRegularTokenFmt" xml:space="preserve">
+    <value>Unlocked {0}</value>
+    <comment>Tool tip that appears over icon in system tray when regular token is not locked.</comment>
+  </data>
+  <data name="ToastMsgReadingInitializedTokenFmt" xml:space="preserve">
+    <value>Accessing {0}...</value>
+    <comment>Message shown in the toast when initialized token is inserted.</comment>
+  </data>
+  <data name="ToastMsgRegularTokenReadyFmt" xml:space="preserve">
+    <value>{0} ready</value>
+    <comment>Message shown in the toast when a regular token is ready to be used.</comment>
+  </data>
+  <data name="TokenCommandActivationFmt" xml:space="preserve">
+    <value>{0} Activation</value>
+    <comment>Name of singleton command when activation wizard appears for uninitialized token. This text is shown in the situation where the token is removed or another command is tried.</comment>
+  </data>
+  <data name="S_ClickToRenewSubscription" xml:space="preserve">
+    <value>Click here to renew your subscription</value>
+    <comment>Used for the link that users will click on to subscribe to the TN</comment>
+  </data>
+  <data name="S_SubscriptionRequired" xml:space="preserve">
+    <value>Subscription Required</value>
+    <comment>Used when an action requires subscription to the TN. We show a toast for this.</comment>
+  </data>
+  <data name="ErrActivateBackupTokenGeneralFmt" xml:space="preserve">
+    <value>An error occurred trying to initialize the {0} for Backup.  Please insert {0} and try backing up again.</value>
+    <comment>This error message appears when an error occurs trying to activate the uninitialized backup token.</comment>
+  </data>
+  <data name="ErrActivateBackupTokenWriteFailedFmt" xml:space="preserve">
+    <value>An error occurred trying to write data to the {0} for Backup.  Please reinsert your {0} and try backing it up again.</value>
+    <comment>This error message appears when an error occurs trying to write to the backup token doing the activation of the uninitialized backup token.</comment>
+  </data>
+  <data name="S_ErrorProcessingRenewalTitle" xml:space="preserve">
+    <value>Subscription Update Error</value>
+    <comment>Title of the message shown when a problem occurs processing the token currency to renew the subscription.</comment>
+  </data>
+  <data name="S_ErrorWritingSubscriptionToTokenTitle" xml:space="preserve">
+    <value>Error Updating Your Subscription</value>
+  </data>
+  <data name="S_SubscriptionExtendedMsgFmt" xml:space="preserve">
+    <value>Congratulations! Your Subscription to the {0} Service has been updated successfully.  
+
+Your subscription is now active through {1}. A confirmation email has been sent to the email address you provided.</value>
+    <comment>This message appears in a message box when the subscription renewal has been applied successfully.</comment>
+  </data>
+  <data name="S_SubscriptionExtendedTitleFmt" xml:space="preserve">
+    <value>{0} Subscription Renewal</value>
+    <comment>This is the title of the message box that appears when the subscription renewal has been applied successfully.</comment>
+  </data>
+  <data name="S_UpdatingSubscriptionOnTokenFmt" xml:space="preserve">
+    <value>Updating {0} with your new subscription...</value>
+  </data>
+  <data name="S_WriteSubscriptionMsgTitle" xml:space="preserve">
+    <value>Saving Subscription Renewal</value>
+    <comment>Shown when we're opening a browser to display a product message</comment>
+  </data>
+  <data name="S_SubscriptionHasAlreadyBeenUpdatedTitle" xml:space="preserve">
+    <value>Your subscription has already been updated</value>
+    <comment>Title for a window shown, when the user is trying to reapply the same token currency</comment>
+  </data>
+  <data name="S_SubscriptionUpdateUserCancel" xml:space="preserve">
+    <value>We were not able to update your ID Vault Service Subscription.  Please make sure your ID Vault is inserted in your USB port.  If you don’t have your ID Vault, refer to the directions in your confirmation email on how to update your ID Vault Service Subscription later.</value>
+    <comment>If the user cancels the token update after paying for a subscription.</comment>
+  </data>
+  <data name="S_SubscriptionUpdateUserCancelTitle" xml:space="preserve">
+    <value>Unable to update Subscription</value>
+  </data>
+  <data name="ErrInitTokenNotPersonalized" xml:space="preserve">
+    <value>Your {0} is failing. Trying removing and then reinserting {0} from your computer to resolve this problem.
+
+{1}</value>
+    <comment>Token is not personalized; either from manufacturing or lost personalization</comment>
+  </data>
+  <data name="S_RenewSubscription_ErrMsgRetrieving" xml:space="preserve">
+    <value>An error occured trying to contact the server to retrieve subscription renewal information.</value>
+  </data>
+  <data name="S_RenewSubscription_ErrorRetrievingTitle" xml:space="preserve">
+    <value>Subscription Retrieval Error</value>
+  </data>
+  <data name="S_WCFServiceCommunicationError" xml:space="preserve">
+    <value>{0} cannot connect to the internet.  Internet access is required for security reasons.
+
+Check your internet connection and try again.</value>
+    <comment>Message shown when there is a communication error thrown by a web service (WCF one) such as the user trying to use the software token being offline.</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="IDVaultInactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\IDVaultInactive.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IDVaultActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\IDVaultActive.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S_DotNetRemotingErrorMsgFmt" xml:space="preserve">
+    <value>Your {0} has encountered a problem related to a known issue with the Microsoft .NET software.
+
+For detailed instructions on how to resolve this issue, click on the {0} icon, select ‘Support’, click on ‘Find Answers’ and search on ‘IPC Error’.”</value>
+    <comment>Shown when the user experiences a .NET Remoting IPC channel failure.</comment>
+  </data>
+  <data name="SoftwareUpdateFileDownloaded" xml:space="preserve">
+    <value>An {0} security update is available.</value>
+    <comment>This message appears when a software update file has been downloaded and needs to be installed on a Vista system when the UAC prompt will appear.</comment>
+  </data>
+  <data name="ErrInitTokenFileNotPresent" xml:space="preserve">
+    <value>The secure password file that was created when you set up Protection Suite cannot be found or it is corrupted.
+
+You will need to repeat the Protection Suite set up process to recreate this file.</value>
+    <comment>Token file is deleted from machine</comment>
+  </data>
+  <data name="SoftwareUpdateDownloading" xml:space="preserve">
+    <value>Downloading update...</value>
+    <comment>Downloading update.</comment>
+  </data>
+  <data name="SoftwareUpdateFailedFmt" xml:space="preserve">
+    <value>{0} can not be updated at this time. Please try again later.
+</value>
+    <comment>Update failed message.  {0} = application display name.</comment>
+  </data>
+  <data name="SoftwareUpdateNetworkUnavailableFmt" xml:space="preserve">
+    <value>{0} can not check for updates at this time because your internet connection is not available.</value>
+    <comment>Network unavailable message. {0} = application display name.</comment>
+  </data>
+  <data name="S_SoftwareUpdateUnavailable" xml:space="preserve">
+    <value>Your {0} software is up-to-date.</value>
+    <comment>No update available message. {0} = application display name.</comment>
+  </data>
+  <data name="CertCorruptErrorFmt" xml:space="preserve">
+    <value>The security certificate that was created when you installed {0} cannot be opened. It may have been damaged or deleted by another application.
+
+To protect your security, you will now need to re-create your Master PIN and add your accounts again. We apologize for any inconvenience.</value>
+    <comment>{0} = application display name.</comment>
+  </data>
+  <data name="CertCreationFailed" xml:space="preserve">
+    <value>Failed to create security certificate</value>
+  </data>
+  <data name="S_TimeDiffTooLarge" xml:space="preserve">
+    <value>Your computer's clock is not set correctly. Accurate time is required by {0} for secure communication.
+
+Please set your computer's clock to the correct time.</value>
+  </data>
+  <data name="S_IncorrectPIN" xml:space="preserve">
+    <value>An incorrect Master PIN was entered. For security reasons you only have four chances to enter the correct PIN.</value>
+    <comment>Shown when the user enters in incorrect PIN.</comment>
+  </data>
+  <data name="S_IncorrectPINTitle" xml:space="preserve">
+    <value>Warning!</value>
+  </data>
+  <data name="S_LastIncorrectPIN" xml:space="preserve">
+    <value>An incorrect Master PIN was entered. The next attempt is the FINAL opportunity you have to enter the correct PIN.
+
+If you enter an incorrect PIN again, your secure password file will be deleted and you will need to add your accounts again.</value>
+  </data>
+  <data name="S_PINLocked" xml:space="preserve">
+    <value>An incorrect Master PIN for your {0} was entered four times.  For security reasons your {0} secure password file has been erased.
+
+You will now be prompted to recreate your PIN. You will then need to add your accounts to {0} again.</value>
+  </data>
+  <data name="S_AccessingTokenError" xml:space="preserve">
+    <value>An unexpected error occurred while accessing {0}.{1}{1}Please click Ok to abort the Wizard.</value>
+  </data>
+  <data name="S_AccessingTokenTitle" xml:space="preserve">
+    <value>Accessing {0}</value>
+  </data>
+  <data name="S_ActivationWizardTitle" xml:space="preserve">
+    <value>Activation Wizard</value>
+  </data>
+  <data name="S_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="S_AddAccountWizardTitle" xml:space="preserve">
+    <value>Add Account Wizard</value>
+  </data>
+  <data name="S_Adding" xml:space="preserve">
+    <value>adding</value>
+  </data>
+  <data name="S_AddSiteSubscriptionRequiredTooltipFmt" xml:space="preserve">
+    <value>Your {0} Trusted Network Subscription has expired. Renew now to extend your subscription.</value>
+    <comment>Show this tooltip when the user clicks on the Add Financial or Add Shopping site buttons in the Add/Remove site wizard.</comment>
+  </data>
+  <data name="S_AllTNSitesListboxHeaderTextFmt" xml:space="preserve">
+    <value>All {0} Trusted Network Sites</value>
+    <comment>Displays in the Add Account Wizard listbox</comment>
+  </data>
+  <data name="S_CertNotFound" xml:space="preserve">
+    <value>Your {0} cannot locate the security certificate that was created when you initially installed the {0} software. Please contact {0} Support to report this issue. To contact support click on the {0} icon, select 'Support' then 'Customer Support'.</value>
+  </data>
+  <data name="S_CommunicationError" xml:space="preserve">
+    <value>{0} Communication Error</value>
+  </data>
+  <data name="S_CorruptDataStoreError" xml:space="preserve">
+    <value>There is a problem with accessing the list of Trusted Network Secure Financial Institutions.  This is being updated for you.  Please try again in a few minutes.</value>
+  </data>
+  <data name="S_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="S_Editing" xml:space="preserve">
+    <value>editing</value>
+  </data>
+  <data name="S_ErrorAddingFinancialAccount" xml:space="preserve">
+    <value>A problem occurred trying to add a financial account. Log off or reboot your computer to resolve this issue. If the problem persists, click on the Protection Suite icon, select ‘Support’ then ‘Customer Support’</value>
+  </data>
+  <data name="S_ErrorAddingOtherSiteAccount" xml:space="preserve">
+    <value>A problem occurred trying to add an account. Log off or reboot your computer to resolve this issue.If the problem persists, click on the Protection Suite icon, select ‘Support’ then ‘Customer Support’</value>
+  </data>
+  <data name="S_ErrorAddingShoppingAccount" xml:space="preserve">
+    <value>A problem occurred trying to add a shopping account. Log off or reboot your computer to resolve this issue.If the problem persists, click on the Protection Suite icon, select ‘Support’ then ‘Customer Support’</value>
+  </data>
+  <data name="S_ErrorConnectionNotAvailable" xml:space="preserve">
+    <value>Your {0} cannot connect to the internet. You must have an active internet connection to use your {0}.</value>
+  </data>
+  <data name="S_ErrorInitializingToken" xml:space="preserve">
+    <value>General error occured while activating your {0}</value>
+  </data>
+  <data name="S_ErrorPrintingSerialNumber" xml:space="preserve">
+    <value>There was an error printing the serial number. Please check you have a working printer setup properly on your computer and try again.</value>
+  </data>
+  <data name="S_ErrorPrintingSerialNumberTitle" xml:space="preserve">
+    <value>Error Printing Serial Number</value>
+  </data>
+  <data name="S_ErrPinCodeNotValid" xml:space="preserve">
+    <value>The PIN must be at least 4 digits long and repeated numbers (ex. 1111) or sequential numbers (ex. 1234) are not allowed</value>
+    <comment>Displayed when PIN code is too short or not valid.</comment>
+  </data>
+  <data name="S_ErrPinCodesNotMatching" xml:space="preserve">
+    <value>PINs do not match</value>
+    <comment>Displayed when entering PIN when Enter PIN doesn't match Re-type PIN.</comment>
+  </data>
+  <data name="S_ErrRestoreMustBeFromBackupTokenFmt" xml:space="preserve">
+    <value>To restore information to your new {0} you must insert an {0} for Backup.</value>
+    <comment>This message toast appears when trying to restore from a regular, non-backup token.</comment>
+  </data>
+  <data name="S_MenuTextBackupTokenNotInitializedFmt" xml:space="preserve">
+    <value>To backup to this {0} for Backup, insert an {0} and run Backup from the Control Center.</value>
+    <comment>Message shown in the menu when an uninitialized backup token is inserted (not during a backup since that initializes the token automatically).</comment>
+  </data>
+  <data name="S_ModifyAccountCredentials" xml:space="preserve">
+    <value>Modify Account Credentials?</value>
+    <comment>Title text for message box in Add Account Wizard when user is asked if they want to try different credentials</comment>
+  </data>
+  <data name="S_OperationBackup" xml:space="preserve">
+    <value>Backup</value>
+    <comment>This is the displayed name of the Backup operation. Due to the similarities in backup and restore, the text is simply substituted when displaying certain information to the user.</comment>
+  </data>
+  <data name="S_OperationNotAllowedWithExpiredTokenFmt" xml:space="preserve">
+    <value>The {0} Subscription is expired or not activated</value>
+  </data>
+  <data name="S_OperationRestore" xml:space="preserve">
+    <value>Restore</value>
+    <comment>This is the displayed name of the Restore operation. Due to the similarities in backup and restore, the text is simply substituted when displaying certain information to the user.</comment>
+  </data>
+  <data name="S_PreparingData" xml:space="preserve">
+    <value>Preparing data. Please wait...</value>
+  </data>
+  <data name="S_PrintAccountTitle" xml:space="preserve">
+    <value>Print Account Information</value>
+  </data>
+  <data name="S_PrivacyPolicyTitle" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="S_ProductOfferWaitToast" xml:space="preserve">
+    <value>Contacting server to retrieve product information...</value>
+  </data>
+  <data name="S_RenewSubscriptionFavoriteInfoTitle" xml:space="preserve">
+    <value>ID Vault Trusted Network Subscription Renewal</value>
+    <comment>This is the name of the web page being browsed to that is displayed on the "Opening site" window.</comment>
+  </data>
+  <data name="S_RenewSubscriptionWaitToast" xml:space="preserve">
+    <value>Contacting server to retrieve subscription information...</value>
+    <comment>This toast is displayed when the user clicks on the Renew Subscription ghyperlink in the Info tab of Control Center.</comment>
+  </data>
+  <data name="S_RenewSubscription_ErrMsgLaunching" xml:space="preserve">
+    <value>An error occured trying to start the Secure View Browser to start your subscription renewal.</value>
+  </data>
+  <data name="S_RenewSubscription_ErrorLaunchingTitle" xml:space="preserve">
+    <value>Error Starting Secure View</value>
+  </data>
+  <data name="S_SerialNumberPrintingDone" xml:space="preserve">
+    <value>The serial number was successfully sent to your printer. Please pick it up now and keep it in a safe place in case you lose or forget the PIN code.</value>
+  </data>
+  <data name="S_SerialNumberPrintingDoneTitle" xml:space="preserve">
+    <value>Serial Number Printout</value>
+  </data>
+  <data name="S_ShowLastTransactionMsgIdFmt" xml:space="preserve">
+    <value>The last unexpected error resulted in the unique code below. 
+
+If you haven't done so yet, please restart {0} by logging off of Windows and then back into Windows.</value>
+    <comment>This message appears when a user asks to see the last unexpected error.</comment>
+  </data>
+  <data name="S_ShowLastTransactionMsgIdTitleFmt" xml:space="preserve">
+    <value>Last {0} Error</value>
+  </data>
+  <data name="S_SubscriptionExpirationFmt" xml:space="preserve">
+    <value>Your subscription is valid through {0}</value>
+    <comment>Shows the unexpired subscription expiration date in the Info tab of Control Center.</comment>
+  </data>
+  <data name="S_SubscriptionExpiredFmt" xml:space="preserve">
+    <value>Your subscription expired on {0}</value>
+    <comment>Shows the expired subscription expiration date in the Info tab of Control Center.</comment>
+  </data>
+  <data name="S_SubscriptionRequiredToast" xml:space="preserve">
+    <value>Subscription Required</value>
+    <comment>To</comment>
+  </data>
+  <data name="S_TellMeMoreAboutOpenOtherSites_URI" xml:space="preserve">
+    <value>http://www.idvault.com/otheraccount</value>
+  </data>
+  <data name="S_TryDifferentCredentialsQuestion" xml:space="preserve">
+    <value>Would you like to try a different user name or password for this account?</value>
+    <comment>Question asked to the user when they say that signon failed in the Add Account Wizard</comment>
+  </data>
+  <data name="S_UnableToLaunchBrowser" xml:space="preserve">
+    <value>Unable to launch browser for web page {0}</value>
+  </data>
+  <data name="S_WaitWhileSecureViewOpensForProductMessage" xml:space="preserve">
+    <value>Please wait while Secure View opens...</value>
+  </data>
+  <data name="ErrInitTokenFileNotPresentHeader" xml:space="preserve">
+    <value>Secure Password File Error</value>
+  </data>
+  <data name="S_ConfirmCancel" xml:space="preserve">
+    <value>Are you sure you want to cancel?</value>
+    <comment>Cancel confirmation question for dialogs.</comment>
+  </data>
+  <data name="S_ConfirmCancelCaption" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Header used in cancel confirmation dialogs.</comment>
+  </data>
+  <data name="S_ConfirmCancelSecurityScan" xml:space="preserve">
+    <value>Are you sure you want to cancel the account scan?</value>
+    <comment>Shown in cancel confirmation dialogs in the Credentials Scan process.</comment>
+  </data>
+  <data name="S_ManualSignOnMissingInfo" xml:space="preserve">
+    <value>Sign in as you normally would so ID Vault can save additional information about this Web site.</value>
+    <comment>Shown in the manual sign-on toast when an Other account is open that has no XPath data.</comment>
+  </data>
+  <data name="S_ManualSignOnTN" xml:space="preserve">
+    <value>Complete this Web page to continue logging in.</value>
+    <comment>Shown in the manual sign-on toast when automated sign-in fails.</comment>
+  </data>
+  <data name="S_AccountAdded" xml:space="preserve">
+    <value>Account added for Safe Login:</value>
+    <comment>Shown in a toast to confirm that an account is added</comment>
+  </data>
+  <data name="S_AccountUpdated" xml:space="preserve">
+    <value>Updated account</value>
+    <comment>Shown in a toast to confirm that an account has been updated</comment>
+  </data>
+  <data name="S_CommuncationErrorCaption" xml:space="preserve">
+    <value>Communication Error</value>
+  </data>
+  <data name="S_TokenNotSignedInErrorFmt" xml:space="preserve">
+    <value>Your secure password file cannot be accessed. Please restart {0} and try again.</value>
+    <comment>Error shown to the user when the token is unexpectedly accessed when not signed in. {0} = Application display name.</comment>
+  </data>
+  <data name="S_DatabaseEntryForRequestedSiteNotFound" xml:space="preserve">
+    <value>Your Protection Suite was unable to find the requested site in the database. Please contact customer Support about this problem.</value>
+    <comment>If for some reason, the user wants to add a site (from the search page) and the site is not in the local data base (should never happen in theory), we want to show an error.</comment>
+  </data>
+  <data name="S_FinishOpenBeforeDashboard" xml:space="preserve">
+    <value>Please finish adding or opening the account before accessing your Protection Suite.</value>
+    <comment>Shown in a toast when the user tries to open Control Center when an account is already being opened.</comment>
+  </data>
+  <data name="S_TooManyAccountsFmt" xml:space="preserve">
+    <value>You already have four accounts for {0}, which is the maximum number that  your {1} can store for one Web site.</value>
+    <comment>{0} = account name. {1} = application display name.</comment>
+  </data>
+  <data name="S_UnableToAddAccountCaption" xml:space="preserve">
+    <value>Unable to Add Account</value>
+  </data>
+  <data name="ServiceUnavailable" xml:space="preserve">
+    <value>Service unavailable, please try later</value>
+    <comment>This message appears when the Pin Service timeout</comment>
+  </data>
+  <data name="S_InvalidIPErrorFmt" xml:space="preserve">
+    <value>Your {0} has detected that you are NOT connected to a legitimate IP address that your {0} has verified for '{1}.'  For your protection, your {0} will not sign you in to this unexpected IP address.
+
+We constantly monitor and verify IP addresses; if an update is necessary, it will be available shortly.</value>
+    <comment>Invalid signon URI error message. {0} = application display name. {1} = account name.</comment>
+  </data>
+  <data name="S_AccountDamagedFmt" xml:space="preserve">
+    <value>This account cannot be opened because the account information is damaged.
+
+You can delete and re-create the account in the {0} dashboard.</value>
+    <comment>{0} = application display name</comment>
+  </data>
+  <data name="S_NoInternetConnection" xml:space="preserve">
+    <value>No Internet Connection</value>
+  </data>
+  <data name="CertCorruptCaption" xml:space="preserve">
+    <value>Missing Security Certificate</value>
+  </data>
+  <data name="S_CannotAddCaption" xml:space="preserve">
+    <value>Cannot Add Site</value>
+  </data>
+  <data name="S_CantNavigateOutOfDomain" xml:space="preserve">
+    <value>Leaving this web site is not allowed for security reasons.</value>
+    <comment>This is shown when the user tries to navigate out of a bank's site domain. We do not allow that.</comment>
+  </data>
+  <data name="S_CantNavigateOutOfDomainCaption" xml:space="preserve">
+    <value>Cannot Leave Current Site</value>
+    <comment>This is shown when the user tries to navigate out of a bank's site domain. We do not allow that.</comment>
+  </data>
+  <data name="S_CompleteThisPage" xml:space="preserve">
+    <value>Complete this page if you are not already logged in</value>
+  </data>
+  <data name="S_NonHTTPSPostSecurityWarning" xml:space="preserve">
+    <value>This site is attempting to transmit your credentials in an insecure manner. Are you sure you want to continue to this site?</value>
+    <comment>Message shown as a security warning when a financial site attempts to post to a  non-HTTPS URL</comment>
+  </data>
+  <data name="S_NonHTTPSPostSecurityWarningCaption" xml:space="preserve">
+    <value>Security Warning</value>
+    <comment>Message shown as a security warning when a financial site attempts to post to a  non-HTTPS URL</comment>
+  </data>
+  <data name="S_SaveAccount" xml:space="preserve">
+    <value>Click "Yes" if you logged in correctly.
+
+Click "No" to go back and retry.</value>
+  </data>
+  <data name="S_SaveAccountCaption" xml:space="preserve">
+    <value>Confirm Login</value>
+  </data>
+  <data name="S_SignInToAddAccount" xml:space="preserve">
+    <value>Log in to this account to set up one-click access</value>
+  </data>
+  <data name="S_SignInToUpdateAccountFmt" xml:space="preserve">
+    <value>Log in to this Web site to update it in your {0}</value>
+    <comment>{0} = application display name</comment>
+  </data>
+  <data name="S_SiteChangedFmt" xml:space="preserve">
+    <value>This Web site cannot be {0} at this time because the site may have changed.
+
+{1} is working to fix this site in a future update. Make sure you have the latest updates by clicking the ? Icon in the {1} and selecting 'Check for Updates'.</value>
+    <comment>Shown when a site cannot be opened or added. {0} = "added" or "opened". {1} = application display name.</comment>
+  </data>
+  <data name="S_OpenSiteTimeout" xml:space="preserve">
+    <value>This Web site is not loading completely so it cannot be added at this time.
+
+You can still browse the site and it may appear normally in the browser.</value>
+  </data>
+  <data name="S_OpenSiteTimeoutCaption" xml:space="preserve">
+    <value>Cannot Open Site</value>
+  </data>
+  <data name="S_InvalidEmail" xml:space="preserve">
+    <value>Invalid email address</value>
+    <comment>Shown in email validation message in activation dialog</comment>
+  </data>
+  <data name="SecurityUpdateTitleFmt" xml:space="preserve">
+    <value>{0} Security Update</value>
+  </data>
+  <data name="S_UnexpectedTokenErrorFmt" xml:space="preserve">
+    <value>An unexpected error occured while accessing your {0}. Please try again.
+
+{1}</value>
+    <comment>Shown when an unexpected exception occurs when signing in. {0} = App name. {1} = Support Contact String.</comment>
+  </data>
+  <data name="TrayBalloonCaptionFmt" xml:space="preserve">
+    <value>Your {0} is now active.</value>
+    <comment>Shown in the tray icon balloon help that teaches the user about the tray icon. {0} = app name.</comment>
+  </data>
+  <data name="TrayBalloonMessageFmt" xml:space="preserve">
+    <value>Click here to use your {0} for safer login to all of your accounts.</value>
+    <comment>Shown in the tray icon balloon help that teaches the user about the tray icon. {0} = app name.</comment>
+  </data>
+  <data name="S_PhishingWarningMessage" xml:space="preserve">
+    <value>{0} does not recognize the IP address used to reach {1}.
+
+Are you sure you want to proceed?</value>
+    <comment>Phishing warning dialog message</comment>
+  </data>
+  <data name="S_ErrorRenamingAccountsWhileTheyAreBeingModified" xml:space="preserve">
+    <value>The account could not be renamed because the list of accounts was being modified outside of the dashboard.</value>
+  </data>
+  <data name="S_ErrorRenamingAccountsWhileTheyAreBeingModifiedTitle" xml:space="preserve">
+    <value>Account Rename Error</value>
+  </data>
+  <data name="S_ConfirmOtherAccountLogin" xml:space="preserve">
+    <value>Click "Yes" if you logged in correctly.
+
+Click "No" to log in again.</value>
+  </data>
+  <data name="S_ConfirmTNAccountLogin" xml:space="preserve">
+    <value>Click "Yes" if you logged in correctly.
+
+Click "No" to go back and retry.</value>
+  </data>
+  <data name="SupportWebPageFreeEdition" xml:space="preserve">
+    <value>http://www.idvault.com/support/FreeEdition/</value>
+  </data>
+  <data name="S_USBFlashDeviceUnplugged" xml:space="preserve">
+    <value>The USB device where ID Vault was running from has been removed.</value>
+  </data>
+  <data name="S_USBFlashDeviceUnpluggedTitle" xml:space="preserve">
+    <value>USB Device Removed</value>
+  </data>
+  <data name="AddOnRegistrationMessageCaption" xml:space="preserve">
+    <value>Web Browser Extension</value>
+  </data>
+  <data name="BackupFailed" xml:space="preserve">
+    <value>An error occured backing up your online accounts.</value>
+  </data>
+  <data name="BackupInProgress" xml:space="preserve">
+    <value>Creating backup. Please wait...</value>
+  </data>
+  <data name="BackupSuccess" xml:space="preserve">
+    <value>Backup created successfully. The file has been protected using your current Master PIN.</value>
+  </data>
+  <data name="RestoreEnterPIN" xml:space="preserve">
+    <value>Enter the Master PIN that was used to protect this backup file</value>
+  </data>
+  <data name="RestoreError" xml:space="preserve">
+    <value>An error occured restoring the backup.</value>
+  </data>
+  <data name="RestoreIncorrectPIN" xml:space="preserve">
+    <value>The PIN you entered does not match with PIN that was used to create this backup. Please try again.</value>
+  </data>
+  <data name="RestoreInProgress" xml:space="preserve">
+    <value>Restoring data. Please wait...</value>
+  </data>
+  <data name="RestoreSameAccountLimitFmt" xml:space="preserve">
+    <value>Backup restored successfully, however, restoring '{0}' would exceed the maximum account limit. {1} can store only four accounts for a given website.</value>
+    <comment>{0} = site name. {1} = application display name.</comment>
+  </data>
+  <data name="RestoreSuccess" xml:space="preserve">
+    <value>Backup restored successfully.</value>
+  </data>
+  <data name="SoftwareUpdate_Browser_IEandFF" xml:space="preserve">
+    <value>Internet Explorer and/or Firefox</value>
+    <comment>Appears in software update to indicate that IE/FF browser is running. Must have CRLF at end of it.</comment>
+  </data>
+  <data name="S_CantStartDesktopIDVaultWhenAPortableIsRunning" xml:space="preserve">
+    <value>Your Protection Suite cannot start until the portable ID Vault is shutdown. Click on the ID Vault Portable system tray icon and select the shutdown option. 
+
+If you continue to have problems, click your Protection Suite desktop icon to start it again.</value>
+  </data>
+  <data name="S_CantStartDesktopIDVaultWhenAPortableIsRunningTitle" xml:space="preserve">
+    <value>Portable ID Vault Still Running</value>
+  </data>
+  <data name="S_EnforcePortableIDVSingleton" xml:space="preserve">
+    <value>The Portable ID Vault cannot run now. Only one Portable ID Vault may be used at a time.</value>
+  </data>
+  <data name="S_EnforcePortableIDVSingletonTitle" xml:space="preserve">
+    <value>New Portable ID Vault Plugged In</value>
+  </data>
+  <data name="S_CantRestartDesktopIDV" xml:space="preserve">
+    <value>Your Protection Suite was unable to start. Please click on the ID Proteciton Suite desktop icon to start the program manually.</value>
+  </data>
+  <data name="S_CantRestartDesktopIDVTitle" xml:space="preserve">
+    <value>Your Protection Suite Could Not Start</value>
+  </data>
+  <data name="S_PortableIDVNotSupportedWithPre56DesktopIDV" xml:space="preserve">
+    <value>Portable ID Vault is only supported with a Desktop ID Vault version 5.6 or later. Please update your Desktop ID Vault to the most recent version before using the Portable ID Vault. 
+
+To update the Desktop ID Vault, click on the ID Vault system tray icon-&gt;Support-&gt;Check For Updates Now</value>
+  </data>
+  <data name="S_PortableIDVNotSupportedWithPre56DesktopIDVTitle" xml:space="preserve">
+    <value>Portable ID Vault Not Supported</value>
+  </data>
+  <data name="SoftwareUpdateNeedAdminPrivFmt" xml:space="preserve">
+    <value>{0} needs adminstrator privileges to execute software update.</value>
+  </data>
+  <data name="S_Loading" xml:space="preserve">
+    <value>Loading...</value>
+    <comment>Shown in the tray icon balloon help when portable version is loading</comment>
+  </data>
+  <data name="S_IDVServiceNotRunningErr" xml:space="preserve">
+    <value>Your Protection Suite Windows service is not currently running. This service is required for the suite work properly and monitor its processes. Your Protection Suite  will now restart to attempt to initiate the service.</value>
+  </data>
+  <data name="S_IDVServiceNotRunningErr2" xml:space="preserve">
+    <value>Your Protection Suite Windows service is not currently running. This service is required for the suite work properly and monitor its processes.Your Protection Suite was unable to start the service successfully. Please go to Control Panel-&gt;Administrative Tools-&gt;Services and start "ID Vault Service".</value>
+  </data>
+  <data name="S_IDVServiceNotRunningErrTitle" xml:space="preserve">
+    <value>ID Vault Service Is Not Running</value>
+  </data>
+  <data name="S_UninstallCertificateFmt" xml:space="preserve">
+    <value>If you plan to reinstall your {0}, click Save so you won’t have to enter your account information again.
+
+To permanently delete all {0} files, including your personal account information, click Delete.</value>
+  </data>
+  <data name="S_UninstallCertificateTitle" xml:space="preserve">
+    <value>Save secure password file?</value>
+  </data>
+  <data name="S_MultipleUsersLoggedFmt" xml:space="preserve">
+    <value>Your {0} is already running for another user logged onto this computer.
+
+To run your {0} as user "{1}", first log off all users. Then log on again as user "{1}".</value>
+  </data>
+  <data name="S_MultipleUsersLoggedTitle" xml:space="preserve">
+    <value>{0} cannot be started</value>
+  </data>
+  <data name="S_GuestUserWarningFmt" xml:space="preserve">
+    <value>Guest users have no permission to run {0}</value>
+  </data>
+  <data name="S_GuestUserWarningTitle" xml:space="preserve">
+    <value>This program will exit now</value>
+  </data>
+  <data name="S_FailedToStartWithMediumIntegrityFmt" xml:space="preserve">
+    <value>A problem occurred trying to launch  your {0}. Try to reboot your computer to correct this issue
+
+
+{1}</value>
+  </data>
+  <data name="S_NoInternetConnectionTrayMessageFmt" xml:space="preserve">
+    <value>Your {0} cannot connect to the internet</value>
+  </data>
+  <data name="S_ExpiredSubscriptionTooltipFmt" xml:space="preserve">
+    <value>Your {0} subscription has expired.  Renew by selecting ‘Support’ and ‘Renew Now’.</value>
+    <comment>{0} == Application display name</comment>
+  </data>
+  <data name="S_FinishEditBeforeDashboard" xml:space="preserve">
+    <value>You must finish editing your account or close the web page before accessing your Protection Suite.</value>
+  </data>
+  <data name="S_BrowserExtensionRestartOnly" xml:space="preserve">
+    <value>Your {0} needs to close your web browser to fully protect your online accounts.
+</value>
+  </data>
+  <data name="S_BrowserExtensionInstallAndRestartBrowser" xml:space="preserve">
+    <value>Your browser needs to be updated with the latest protection. During the update process, all open browsers will be automatically closed.</value>
+  </data>
+  <data name="S_BrowserExtensionInstallOnly" xml:space="preserve">
+    <value>Your {0} needs to install browser extensions so you can add accounts using your browser.</value>
+  </data>
+  <data name="S_OutOfDomainNavigationWarning" xml:space="preserve">
+    <value>You are about to leave this Web site and open a new Web page that is not recognized by your Protection Suite.
+
+If you are sure this is a safe site, click "Continue".</value>
+  </data>
+  <data name="S_OutOfDomainNavigationWarningTitle" xml:space="preserve">
+    <value>CAUTION</value>
+  </data>
+  <data name="S_DoNotUnplugUSBWhileUpdating" xml:space="preserve">
+    <value>Do not unplug ID Vault while update is in process.</value>
+  </data>
+  <data name="S_DesktopIDVaultReady" xml:space="preserve">
+    <value>Desktop ID Vault Ready</value>
+  </data>
+  <data name="S_PortableIDVaultReady" xml:space="preserve">
+    <value>Portable ID Vault Ready</value>
+  </data>
+  <data name="CannotAddOtherAccounts" xml:space="preserve">
+    <value>Your Protection Suite cannot add 'Other' accounts on this computer.</value>
+  </data>
+  <data name="S_InstallCompleteRestartFmt" xml:space="preserve">
+    <value>Restart your browser and log in to your online accounts as you normally do and {0} will prompt you to set up secure one-click access.</value>
+    <comment>Shown at the end of install if browser needs restarting.</comment>
+  </data>
+  <data name="S_InstallCompleteVirtualizedFmt" xml:space="preserve">
+    <value>Start protecting your accounts now by choosing an option from the {0} menu.</value>
+    <comment>Shown at the end of install if portable is running virtualized.</comment>
+  </data>
+  <data name="S_IDVaultServiceNotRunning" xml:space="preserve">
+    <value>Your Protection Suite Windows service is not currently running. This service is required for the suite work properly and monitor its processes. Protection Suite will now stop.</value>
+  </data>
+  <data name="S_IDVSvcNotInstall" xml:space="preserve">
+    <value>IDVaultSvc is not install</value>
+  </data>
+  <data name="S_IDVSvcNotRunning" xml:space="preserve">
+    <value>IDVaultSvc is not running</value>
+  </data>
+  <data name="S_UpdateNeedReoot" xml:space="preserve">
+    <value>{0} Security Update successful. Keylogger protection will be enabled after you next reboot.</value>
+  </data>
+  <data name="S_Initializing" xml:space="preserve">
+    <value>Initializing  </value>
+  </data>
+  <data name="S_PleaseWait" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
+  <data name="S_PINMouseEntryToolTip" xml:space="preserve">
+    <value>Click the numbers with your mouse
+to create your Master PIN</value>
+  </data>
+  <data name="S_InstallRestartMessage" xml:space="preserve">
+    <value>You must restart your computer to complete the installation of important security features. We recommend that you restart your computer immediately.
+
+Restart now?</value>
+    <comment>Shown by the dashboard when a restart is pending</comment>
+  </data>
+  <data name="S_SecurityAndKeyLoggerUpdateSuccessful" xml:space="preserve">
+    <value>You must restart your computer to complete the security update.</value>
+  </data>
+  <data name="S_ServerError" xml:space="preserve">
+    <value>Error occured contacting server please retry again.</value>
+  </data>
+  <data name="S_IE9WarningFmt" xml:space="preserve">
+    <value>Internet Explorer requires permission to enable {0} Protection. Click “OK” so you can securely login to all your online accounts with just one click.</value>
+    <comment>{0} = partner-specific short app display name</comment>
+  </data>
+  <data name="S_IE9WarningTitleFmt" xml:space="preserve">
+    <value>Enable {0} Protection</value>
+    <comment>{0} = partner-specific short app display name</comment>
+  </data>
+  <data name="S_BackEndServicesNotReacheable" xml:space="preserve">
+    <value>An Internet connectivity issue has been detected. Check your personal firewall settings to ensure the {0} has access to the Internet. If you continue to experience this issue, please visit our FAQs from the link below.</value>
+    <comment>Shown if there is a connectivity issue before we call the sky.
+{0} == app name</comment>
+  </data>
+  <data name="S_SoftwareUpdateBrowserOpenWarning" xml:space="preserve">
+    <value>In order to update the {0}, we need to close your open browsers. Do you want to do that now?</value>
+    <comment>This message appears when the software update is available and more than one type of browser is running</comment>
+  </data>
+  <data name="S_SoftwareUpdateWillTakePlaceAtNextReboot" xml:space="preserve">
+    <value>The {0} will be updated the next time you reboot your computer.</value>
+    <comment>if the users chooses not to update now, we will tell them we'll do this at the next reboot</comment>
+  </data>
+  <data name="S_KeepAntiKeyLoggingDisabledFmt" xml:space="preserve">
+    <value>Anti-keylogging functionality is about to be re-enable.     Would you like continue to have anti-keylogging disabled for another {0} minutes?</value>
+    <comment>Shown in an IPC call from service when service's timer expired.  {0} = number of minutes.</comment>
+  </data>
+  <data name="S_KeepAntiKeyLoggingDisabledTitle" xml:space="preserve">
+    <value>Keep Anti-Keylogger disabled?</value>
+  </data>
+  <data name="S_RebootRequired" xml:space="preserve">
+    <value>Please SAVE all your data before continuing update.  An automatic reboot may be performed after completion of the manual software update.  Start update?</value>
+  </data>
+  <data name="S_BrowserExtensionInstallCloseBrowser" xml:space="preserve">
+    <value>Your {0} needs to close your web browser to install a browser extension.</value>
+  </data>
+  <data name="DnssecPromptToTurnOnFeature" xml:space="preserve">
+    <value>The Constant Guard Protection Suite now has a safety feature to let you know if your are not using Constant Guard Secure DNS servers.  You are NOT currently connected to Constant Guard Secure DNS servers.  We recommend that you use Constant Guard Secure DNS servers to help avoid fraudulent and malicious web sites.
+ 
+Connect to the Constant Guard DNS servers when you use the Xfinity Internet service?</value>
+  </data>
+  <data name="DnssecMoreInfoUrl" xml:space="preserve">
+    <value>http://cgps.idvault.com/support/faqs/DNSLock.aspx</value>
+  </data>
+  <data name="S_UpdateManualCheck" xml:space="preserve">
+    <value>Getting software update...</value>
+    <comment>Shown as a toast when the user manually checks for updates</comment>
+  </data>
+  <data name="RestoreIncorrectPINNumberOfTriesExceeded" xml:space="preserve">
+    <value>The PIN you entered does not match with PIN that was used to create this backup. Maximum number of attempts reached. The Restore functionality has been temporarily disabled.</value>
+  </data>
+  <data name="DnssecSettingsChangedAlertText" xml:space="preserve">
+    <value>The Constant Guard Protection Suite detected a change in your DNS settings and will automatically switch back to Constant Guard Secure DNS.  If you wish to use another DNS, please turn the DNS lock setting to OFF in the Options tab.</value>
+  </data>
+  <data name="DnssecTurnOffAreYouSure" xml:space="preserve">
+    <value>The Constant Guard DNS servers use DNSSEC to help protect you from phishing and other cyber threats.  If you turn off DNS Lock, your computer can connect to other DNS servers which may not have this protection.
+
+Are you sure you want to make this change?</value>
+  </data>
+  <data name="DnssecTurnOnConfirmationText" xml:space="preserve">
+    <value>The Constant Guard Protection Suite has updated your DNS settings to use Constant Guard Secure DNS.  As a security protection, if your DNS settings change to a different DNS while using the Xfinity Internet service, the Constant Guard Protection Suite will automatically switch back to Constant Guard Secure DNS.</value>
+  </data>
+  <data name="SF_MasterPINActivation" xml:space="preserve">
+    <value>Your Master PIN allows you to securely access your {0}</value>
+    <comment>shown when activating and creating teh PIN. {0} is the full product name.</comment>
+  </data>
+  <data name="S_FirefoxWarningFmt1" xml:space="preserve">
+    <value>Firefox requires permission to enable {0} Protection. Click “OK” so you can securely login to all your online accounts with just one click.</value>
+    <comment>{0} = partner-specific short app display name</comment>
+  </data>
+  <data name="S_AccountAlreadyEstablished" xml:space="preserve">
+    <value>We're sorry!  You are not logged in as the correct windows user of AOL OnePoint. Please sign off and log in as a different windows user.</value>
+  </data>
+  <data name="ActivationWizardDefaultInitText" xml:space="preserve">
+    <value>Initializing. Please wait...</value>
+  </data>
+  <data name="ActivationWizardHelperNoteText" xml:space="preserve">
+    <value>Use your mouse to click 4-8 numbers</value>
+  </data>
+  <data name="ActivationWizardPinPadTitle" xml:space="preserve">
+    <value>SET MASTER PIN</value>
+  </data>
+  <data name="ActivationWizardPinPageTitle" xml:space="preserve">
+    <value>PIN Setup</value>
+  </data>
+  <data name="ActivationWizardRetypePinHelperNoteText" xml:space="preserve">
+    <value>Please click your 4-8 number PIN again</value>
+  </data>
+  <data name="ActivationWizardRetypePinPadTitle" xml:space="preserve">
+    <value>CONFIRM MASTER PIN</value>
+  </data>
+  <data name="ActivationWizardRetypePinPageTitle" xml:space="preserve">
+    <value>Confirm Your PIN</value>
+  </data>
+  <data name="ActivationWizardText" xml:space="preserve">
+    <value>ActivationWizardText</value>
+  </data>
+  <data name="BackButtonText" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DefaultAppDisplayName" xml:space="preserve">
+    <value>ID Vault</value>
+  </data>
+  <data name="NextButtonText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="PartnerAppDisplayNameLong" xml:space="preserve">
+    <value>PartnerAppDisplayNameLong</value>
+  </data>
+  <data name="PartnerAppDisplayNameShort" xml:space="preserve">
+    <value>PartnerAppDisplayNameShort</value>
+  </data>
+  <data name="PartnerLegalNotice" xml:space="preserve">
+    <value>PartnerLegalNotice</value>
+  </data>
+  <data name="ToolTipTimeOut" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="TrayTipMinimizeCount" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="AddOnLoadTimeThresholdName" xml:space="preserve">
+    <value>AddonLoadTimeThreshold</value>
+  </data>
+  <data name="ApprovedExtensionsPath" xml:space="preserve">
+    <value>Software\Microsoft\Internet Explorer\Approved Extensions\</value>
+  </data>
+  <data name="BhoGuid" xml:space="preserve">
+    <value>B84CDBE7-1B46-494B-A188-01D4C52DEB61</value>
+  </data>
+  <data name="ExtSettingsPath" xml:space="preserve">
+    <value>Software\Microsoft\Windows\CurrentVersion\Ext\Settings\</value>
+  </data>
+  <data name="IeMainRegArea" xml:space="preserve">
+    <value>Software\Microsoft\Internet Explorer\Main\</value>
+  </data>
+  <data name="MaoSettingsPath" xml:space="preserve">
+    <value>Software\Microsoft\Internet Explorer\MAO Settings\</value>
+  </data>
+  <data name="S_ErrorOpeningIDGSite" xml:space="preserve">
+    <value>Unable to open the Identity Guard web page. Please try again.</value>
+  </data>
+  <data name="S_ErrorOpeningIDGSiteTitle" xml:space="preserve">
+    <value>Navigation Error</value>
+  </data>
+  <data name="S_AudioAccessAttemptDetected" xml:space="preserve">
+    <value>The program {0} is trying to connect to your microphone in order make an audio call. Do not click 'Allow' unless this is a legitimate application, such as Instant Messenger or a similar trusted application.</value>
+  </data>
+  <data name="S_BrowserAccessAttemptDetected" xml:space="preserve">
+    <value>The program {0} is trying to install a suspicious BHO.\nBHOs are common plugins written for 'Internet Explorer' to enhance its capabilities. However, this feature can also be misused by spyware programs to capture a user’s login credentials. Do not click 'Allow' unless this is a trusted and known application.</value>
+  </data>
+  <data name="S_ClipboardAccessAttemptDetected" xml:space="preserve">
+    <value>The program {0} is attempting to capture images of data on your clipboard. Do not click 'Allow' unless this is a trusted and known application.</value>
+  </data>
+  <data name="S_DriverLoadAttemptDetected" xml:space="preserve">
+    <value>The program {0} is trying to modify critical system data. Do not click 'Allow' unless this is a trusted and known application.</value>
+  </data>
+  <data name="S_KeyLoggingAttemptDetected" xml:space="preserve">
+    <value>The program {0} is trying to log your keystrokes. Do not click 'Allow' unless this is a trusted and known application.</value>
+  </data>
+  <data name="S_ScreenCaptureAttemptDetected" xml:space="preserve">
+    <value>The program {0} is trying to capture an image of your current monitor’s screen. Do not click 'Allow' unless this is a trusted and know application.</value>
+  </data>
+  <data name="S_UnknownDriverActivityDetected" xml:space="preserve">
+    <value>An unknown program is taking an unrecognized action. It is strongly recommended that you do not click 'Allow' unless know this is trusted application.</value>
+  </data>
+  <data name="S_WebcamAccessAttemptDetected" xml:space="preserve">
+    <value>The program {0} is trying to connect to your webcam. Do not click 'Allow' unless this is a legitimate application such as an Instant Messenger or a similar trusted application.</value>
+  </data>
+  <data name="PluginsNoPluginsInitializedMessage" xml:space="preserve">
+    <value>No plugins were successfully initialized</value>
+  </data>
+  <data name="AccountWizardEnterCredentialsText" xml:space="preserve">
+    <value>  Enter your username/password and then click the "Set Up" button to set up an encrypted secure login.</value>
+  </data>
+  <data name="AccountWizardHeaderText" xml:space="preserve">
+    <value>Set Up Secure Logins</value>
+  </data>
+  <data name="AccountWizardIsMyDataSafeText" xml:space="preserve">
+    <value>Is my data safe?</value>
+  </data>
+  <data name="AccountWizardSubHeaderText" xml:space="preserve">
+    <value>This wizard helps you set up popular accounts so you can login securely with a single click.  Just enter your username and password and we will encrypt them on your computer so only you have access to them.   </value>
+  </data>
+  <data name="AccountWizardTitle" xml:space="preserve">
+    <value>Account Wizard</value>
+  </data>
+  <data name="AccountWizardEnterPasswordText" xml:space="preserve">
+    <value>Please enter your {0} password before clicking the "Set Up" button.</value>
+  </data>
+  <data name="AccountWizardEnterUsernameText" xml:space="preserve">
+    <value>Please enter your {0} username before clicking the "Set Up" button.</value>
+  </data>
+  <data name="AccountWizardSetupSuccessfulText" xml:space="preserve">
+    <value>Your {0} account has been securely encrypted onto this machine and is ready for quick-click access direct from your {1} dashboard.</value>
+  </data>
+  <data name="AccountWizardNextButtonText" xml:space="preserve">
+    <value>Skip Account Set Up</value>
+  </data>
+  <data name="AccountWizardConfHeaderText" xml:space="preserve">
+    <value>Set Up Complete!</value>
+  </data>
+  <data name="AccountWizardConfLeftHeaderText" xml:space="preserve">
+    <value>Opening Your Saved Accounts</value>
+  </data>
+  <data name="AccountWizardConfLeftRememberText" xml:space="preserve">
+    <value>You can set up as many accounts as you want. We will prompt you to do that if we see you logging in insecurely and with you just logging in once, we will add that account to your account list in the dashboard. Easy!</value>
+  </data>
+  <data name="AccountWizardConfLeftRememberTextPrefix" xml:space="preserve">
+    <value>Remember: </value>
+  </data>
+  <data name="AccountWizardConfLeftStep1Text" xml:space="preserve">
+    <value>Click on the {0} system tray icon</value>
+  </data>
+  <data name="AccountWizardConfLeftStep2Text" xml:space="preserve">
+    <value>Click on your account name</value>
+  </data>
+  <data name="AccountWizardConfLeftStep3Text" xml:space="preserve">
+    <value>If prompted, enter the Master PIN you set during installation</value>
+  </data>
+  <data name="AccountWizardConfLeftStep4Text" xml:space="preserve">
+    <value>{0} securely logs you into your selected account</value>
+  </data>
+  <data name="AccountWizardConfNextButtonText" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="AccountWizardConfRightStep1Text" xml:space="preserve">
+    <value>Step 1: Open {0}</value>
+  </data>
+  <data name="AccountWizardConfRightStep2Text" xml:space="preserve">
+    <value>Step 2: Select An Account</value>
+  </data>
+  <data name="AccountWizardConfSubHeaderText" xml:space="preserve">
+    <value>Once you have set up some of your online accounts, you can securely login without having to remember or type in any usernames or passwords.</value>
+  </data>
+  <data name="AccountWizardProductNotActivatedText" xml:space="preserve">
+    <value>Please activate this product before using the Account Wizard.</value>
+  </data>
+  <data name="AccountWizardNextDoneButtonText" xml:space="preserve">
+    <value>Done Adding Accounts</value>
+  </data>
+  <data name="AccountWizardMessageBoxCaption" xml:space="preserve">
+    <value>Add Account Wizard</value>
+  </data>
+  <data name="AccountWizardSetupSuccessfulLabelText" xml:space="preserve">
+    <value>Set up successful!</value>
+  </data>
+  <data name="SearchBarDefaultText" xml:space="preserve">
+    <value>Search...</value>
+  </data>
+  <data name="SearchBarEnterTextMessage" xml:space="preserve">
+    <value>Please enter the keywords to search for first.</value>
+  </data>
+  <data name="SearchBarInvalidUriMessage" xml:space="preserve">
+    <value>Unable to search for specified keywords.</value>
+  </data>
+  <data name="SearchBarSelectSearchEngine" xml:space="preserve">
+    <value>Please select the desired search engine from the drop down first.</value>
+  </data>
+  <data name="S_CloseFirefoxForBrowserExtensionInstall" xml:space="preserve">
+    <value>Your Firefox browser needs to be updated with the latest protection. During the update process, all open browsers will be automatically closed.</value>
+  </data>
+  <data name="WirelessPhoneSyncErrorMessageText" xml:space="preserve">
+    <value>Please verify that the Mobile Device Code is correct</value>
+  </data>
+  <data name="S_ExtensionEnableTitleFmt" xml:space="preserve">
+    <value>Enable {0} Protection</value>
+    <comment>{0} = partner-specific short app display name</comment>
+  </data>
+  <data name="S_ExtensionEnableWarningFmt" xml:space="preserve">
+    <value>{0} requires permission to enable {1} Protection. Click “OK” so you can securely login to all your online accounts with just one click.</value>
+    <comment>{0} = Browser name {1} = partner-specific short app display name</comment>
+  </data>
+  <data name="S_ExtensionInstallTitleFmt" xml:space="preserve">
+    <value>Enable {0} protection now!</value>
+    <comment>{0} = partner-specific short app display name</comment>
+  </data>
+  <data name="S_ExtensionInstallWarningFmt" xml:space="preserve">
+    <value>Please install a new browser extension to enable your protection. Click “OK” and follow the “Install” instructions provided by your browser.</value>
+  </data>
+  <data name="S_UpdateBrowserExtensionTitleFmt" xml:space="preserve">
+    <value>Update {0} protection now!</value>
+    <comment>{0} = partner-specific short app display name</comment>
+  </data>
+  <data name="ToastAddThisAccountHeaderText" xml:space="preserve">
+    <value>Add this Account to your {0}</value>
+  </data>
+  <data name="ToastAddThisAccountMessageText" xml:space="preserve">
+    <value>Next time, click on the {0} icon on your desktop to safely log in to this account with one click.</value>
+  </data>
+  <data name="SearchBarSafeSearchDefaultText" xml:space="preserve">
+    <value>{0} Safe Search</value>
+  </data>
+  <data name="AddAccountTypeSelectorAddFinancialOptionText" xml:space="preserve">
+    <value>Add Financial</value>
+  </data>
+  <data name="AddAccountTypeSelectorAddOtherOptionText" xml:space="preserve">
+    <value>Add Other</value>
+  </data>
+  <data name="AddAccountTypeSelectorHeaderText" xml:space="preserve">
+    <value>Add Account</value>
+  </data>
+  <data name="AddAccountTypeSelectorSubHeaderTextA" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="AddAccountTypeSelectorSubHeaderTextB" xml:space="preserve">
+    <value> Financial </value>
+  </data>
+  <data name="AddAccountTypeSelectorSubHeaderTextC" xml:space="preserve">
+    <value>for bank, stock, credit cards and similar accounts.  Select</value>
+  </data>
+  <data name="AddAccountTypeSelectorSubHeaderTextD" xml:space="preserve">
+    <value> Other </value>
+  </data>
+  <data name="AddAccountTypeSelectorSubHeaderTextE" xml:space="preserve">
+    <value>for Facebook, shopping, email, others.</value>
+  </data>
+  <data name="ActivationWizardPinPageSubTitleA" xml:space="preserve">
+    <value>Use this Master PIN to safely log in to</value>
+  </data>
+  <data name="ActivationWizardPinPageSubTitleB" xml:space="preserve">
+    <value> all </value>
+  </data>
+  <data name="ActivationWizardPinPageSubTitleC" xml:space="preserve">
+    <value>your accounts through {0}</value>
+  </data>
+  <data name="PostUpdateDialogCaptionA" xml:space="preserve">
+    <value>New! </value>
+  </data>
+  <data name="PostUpdateDialogMessage" xml:space="preserve">
+    <value>A new look and many more features.</value>
+  </data>
+  <data name="PostUpdateDialogCaptionB" xml:space="preserve">
+    <value>Updates to your {0}</value>
+  </data>
+  <data name="PersonalInfoBillingAddressLabelText" xml:space="preserve">
+    <value>Billing Address</value>
+  </data>
+  <data name="PersonalInfoBillingCityLabelText" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="PersonalInfoBillingFirstNameLabelText" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="PersonalInfoBillingLastNameLabelText" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="PersonalInfoBillingStateLabelText" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="PersonalInfoBillingStreetAddressLabelText" xml:space="preserve">
+    <value>Street Address</value>
+  </data>
+  <data name="PersonalInfoCardNicknameLabelText" xml:space="preserve">
+    <value>Card Nickname (optional)</value>
+  </data>
+  <data name="PersonalInfoCardTypeLabelText" xml:space="preserve">
+    <value>Card Type *</value>
+  </data>
+  <data name="PersonalInfoContactInfoLabelText" xml:space="preserve">
+    <value>Contact Info</value>
+  </data>
+  <data name="PersonalInfoCreditCardDetailsLabelText" xml:space="preserve">
+    <value>Credit Card Details</value>
+  </data>
+  <data name="PersonalInfoCreditCardNumberLabelText" xml:space="preserve">
+    <value>Credit Card Number *</value>
+  </data>
+  <data name="PersonalInfoDetailsPanelDefaultText" xml:space="preserve">
+    <value>Select a card to view or edit the saved information</value>
+  </data>
+  <data name="PersonalInfoEmailAddressLabelText" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="PersonalInfoExpirationDateLabelText" xml:space="preserve">
+    <value>Expiration *</value>
+  </data>
+  <data name="PersonalInfoNameOnCardLabelText" xml:space="preserve">
+    <value>Name on Credit Card *</value>
+  </data>
+  <data name="PersonalInfoPhoneNumberLabelText" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="PersonalInfoSecurityCodeLabelText" xml:space="preserve">
+    <value>Security Code *</value>
+  </data>
+  <data name="PersonalInfoShippingAddressLabelText" xml:space="preserve">
+    <value>Shipping Address</value>
+  </data>
+  <data name="PersonalInfoShippingCityLabelText" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="PersonalInfoShippingFirstNameLabelText" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="PersonalInfoShippingLastNameLabelText" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="PersonalInfoShippingStateLabelText" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="PersonalInfoShippingStreetAddressLabelText" xml:space="preserve">
+    <value>Street Address</value>
+  </data>
+  <data name="PersonalInfoUseButtonText" xml:space="preserve">
+    <value>Autofill</value>
+  </data>
+  <data name="FriendlyCreditCardNameForAmex" xml:space="preserve">
+    <value>AMEX</value>
+  </data>
+  <data name="FriendlyCreditCardNameForDinersClub" xml:space="preserve">
+    <value>Diners Club</value>
+  </data>
+  <data name="FriendlyCreditCardNameForDiscover" xml:space="preserve">
+    <value>Discover</value>
+  </data>
+  <data name="FriendlyCreditCardNameForJCB" xml:space="preserve">
+    <value>JCB</value>
+  </data>
+  <data name="FriendlyCreditCardNameForMasterCard" xml:space="preserve">
+    <value>MasterCard</value>
+  </data>
+  <data name="FriendlyCreditCardNameForVisa" xml:space="preserve">
+    <value>VISA</value>
+  </data>
+  <data name="PersonalInfoAddCreditCardButtonNoCardsText" xml:space="preserve">
+    <value>Add First Credit Card</value>
+  </data>
+  <data name="PersonalInfoAddCreditCardButtonNormalText" xml:space="preserve">
+    <value>Add Credit Card</value>
+  </data>
+  <data name="PersonalInfoBillingZipcodeLabelText" xml:space="preserve">
+    <value>Zipcode</value>
+  </data>
+  <data name="PersonalInfoCopyInfoFromCardLabelText" xml:space="preserve">
+    <value>Copy Contact Info and Addresses from:</value>
+  </data>
+  <data name="PersonalInfoShippingZipcodeLabelText" xml:space="preserve">
+    <value>Zipcode</value>
+  </data>
+  <data name="PersonalInfoCopyInfoFromCardDefaultValueText" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="PersonalInfoBillingAddressDetailsHeader" xml:space="preserve">
+    <value>Billing Address</value>
+  </data>
+  <data name="PersonalInfoCancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="PersonalInfoCardNicknameExistsMessage" xml:space="preserve">
+    <value>Card nickname already exists. Please enter a unique nickname.</value>
+  </data>
+  <data name="PersonalInfoCloseLinkText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="PersonalInfoContactInfoDetailsHeader" xml:space="preserve">
+    <value>Contact Info</value>
+  </data>
+  <data name="PersonalInfoCreditCardDetailsHeader" xml:space="preserve">
+    <value>Credit Card Details</value>
+  </data>
+  <data name="PersonalInfoDeleteButtonText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="PersonalInfoEditButtonText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="PersonalInfoEnterFullNameShownOnCardMessage" xml:space="preserve">
+    <value>Please enter the full name shown on the card.</value>
+  </data>
+  <data name="PersonalInfoEnterValidCardNumberMessage" xml:space="preserve">
+    <value>Please enter a valid {0} card number.</value>
+  </data>
+  <data name="PersonalInfoEnterValidSecurityCodeMessage" xml:space="preserve">
+    <value>Please enter a valid security code.</value>
+  </data>
+  <data name="PersonalInfoHeaderText" xml:space="preserve">
+    <value>Securely add credit cards to let you autofill shopping carts.</value>
+  </data>
+  <data name="PersonalInfoLearnMoreLinkText" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="PersonalInfoSaveButtonText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="PersonalInfoSelectCardTypeMessage" xml:space="preserve">
+    <value>Please select the card type.</value>
+  </data>
+  <data name="PersonalInfoSelectExpirationDateMessage" xml:space="preserve">
+    <value>Please select the expiration date.</value>
+  </data>
+  <data name="PersonalInfoShippingAddressDetailsHeader" xml:space="preserve">
+    <value>Shipping Address</value>
+  </data>
+  <data name="PersonalInfoTextLine1" xml:space="preserve">
+    <value>Easily bring up your credit cards and automatically fill in shopping carts.</value>
+  </data>
+  <data name="PersonalInfoTextLine2" xml:space="preserve">
+    <value>Never type card numbers, expire dates, addresses, or phone numbers again.</value>
+  </data>
+  <data name="PersonalInfoConfirmCardDeletionTextFormat" xml:space="preserve">
+    <value>Delete credit card {0}?</value>
+  </data>
+  <data name="DashboardRightClickOnAccountForOptionsText" xml:space="preserve">
+    <value>Right-click an account for options...</value>
+  </data>
+  <data name="PersonalInfoDoNotShowCheckBoxText" xml:space="preserve">
+    <value>Don't show this dialog again</value>
+  </data>
+  <data name="PersonalInfoGoToDesktopAppLinkText" xml:space="preserve">
+    <value>Go to Desktop App</value>
+  </data>
+  <data name="PersonalInfoSelectAnotherCardLinkText" xml:space="preserve">
+    <value>Select another card</value>
+  </data>
+  <data name="PersonalInfoCopyButtonText" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="PersonalInfoAvailableCardsHeaderText" xml:space="preserve">
+    <value>Available Credit Cards</value>
+  </data>
+  <data name="PersonalInfoAvailableCardsSubHeaderText" xml:space="preserve">
+    <value>Select a card to complete purchase.</value>
+  </data>
+  <data name="PersonalInfoCopyTooltipText" xml:space="preserve">
+    <value>Use the Copy button to click n' click or drag n' drop your data.</value>
+  </data>
+  <data name="ActiveXWarningFriendlyMessage" xml:space="preserve">
+    <value>One or more ActiveX controls on the page have been blocked for your security. As a result, some content may not be displayed.</value>
+    <comment>The user-friendly message displayed from SecureView when it blocks ActiveX control or other plugins.</comment>
+  </data>
+  <data name="ActiveXWarningOriginalMessage" xml:space="preserve">
+    <value>One or more ActiveX controls could not be displayed because either:\n\n1) Your current security settings prohibit running ActiveX controls on this page, or\n2) You have blocked a publisher of one of the controls.\n\nAs a result, the page might not display correctly.</value>
+    <comment>The original message displayed from SecureView when it blocks ActiveX control or other plugins.</comment>
+  </data>
+  <data name="MobileDevicePINHintFmt" xml:space="preserve">
+    <value>Please enter the PIN for {0}</value>
+    <comment>Mobile device {0} PIN hint when you perform "Sync".</comment>
+  </data>
+  <data name="SyncWizardTitle" xml:space="preserve">
+    <value>Sync Wizard</value>
+    <comment>Title of the sync wizard dialog</comment>
+  </data>
+  <data name="ReceiveDataFromDevicePromptFmt" xml:space="preserve">
+    <value>Receiving data from device {0}...</value>
+    <comment>Receiving data from device</comment>
+  </data>
+  <data name="SyncRequestProcessingPromptFmt" xml:space="preserve">
+    <value>Processing sync request from {0}...</value>
+    <comment>Processing sync request prompt</comment>
+  </data>
+  <data name="SyncWizardStartButtonText" xml:space="preserve">
+    <value>Find</value>
+    <comment>Button text for starting the sync wizard after the instructions.</comment>
+  </data>
+  <data name="SyncWizardInstructionsStep1Text" xml:space="preserve">
+    <value>Make sure that the devices you want to sync are connected to the same 
+Wi-Fi or Local Area Network</value>
+    <comment>Step 1 instruction text on Sync wizard dialog</comment>
+  </data>
+  <data name="SyncWizardInstructionsStep2Text" xml:space="preserve">
+    <value>Open the {0} App on the device or PC you would like to sync with, and open sync.
+Click Find on only one device</value>
+    <comment>Step 2 instruction text on Sync wizard dialog</comment>
+  </data>
+  <data name="SyncWizardInstructionsStep3Text" xml:space="preserve">
+    <value>Click Find below on one of your devices</value>
+    <comment>Step 3 instruction text on Sync wizard dialog</comment>
+  </data>
+  <data name="PersonalInfoSecurityDisclaimerText" xml:space="preserve">
+    <value>All card data is encrypted and visible only to you.</value>
+  </data>
+  <data name="SyncCompletedPromptFmt" xml:space="preserve">
+    <value>All accounts are synced between {0} and {1}</value>
+    <comment>Sync completed prompt format</comment>
+  </data>
+  <data name="SyncWizardDeviceFoundComment" xml:space="preserve">
+    <value>Select the device you would like to sync with</value>
+    <comment>Wizard comment while searching device</comment>
+  </data>
+  <data name="SyncWizardDeviceFoundTitle" xml:space="preserve">
+    <value>Sync Accounts</value>
+    <comment>Wizard title while searching device</comment>
+  </data>
+  <data name="SyncWizardSearchingDeviceComment" xml:space="preserve">
+    <value>Finding devices to sync with on the Local Area Network</value>
+    <comment>Wizard comment while searching device</comment>
+  </data>
+  <data name="SyncWizardSearchingDeviceTitle" xml:space="preserve">
+    <value>Sync-Looking for devices</value>
+    <comment>Wizard title while searching device</comment>
+  </data>
+  <data name="SyncWizardHeaderInstructions" xml:space="preserve">
+    <value>Sync your logins and credit cards with {0} on another device. Please make sure that you are running the latest version of {1} on both devices. For enhanced security, avoid syncing your devices on a public Wi-Fi or Hotspot.</value>
+  </data>
+  <data name="SyncConnectionFailedPromptFmt" xml:space="preserve">
+    <value>Connection failed. Please make sure {0} is running on the device.</value>
+    <comment>Sync connection failed prompt format string</comment>
+  </data>
+  <data name="SyncWizardAuthenticationFailed" xml:space="preserve">
+    <value>Authentication failed, please try again with right PIN.</value>
+    <comment>Prompt text when authentication failed</comment>
+  </data>
+  <data name="SyncWizardClosingConnection" xml:space="preserve">
+    <value>Closing connection...</value>
+    <comment>Prompt text when closing connection...</comment>
+  </data>
+  <data name="SyncWizardConnectingToDevice" xml:space="preserve">
+    <value>Connecting to the device ...</value>
+    <comment>Prompt text when connecting to device</comment>
+  </data>
+  <data name="SyncWizardConnectionSucessful" xml:space="preserve">
+    <value>Connection successful</value>
+    <comment>Prompt text when connection sucessful</comment>
+  </data>
+  <data name="SyncWizardGettingDataFailed" xml:space="preserve">
+    <value>Failed to get data size from device.</value>
+    <comment>Prompt text when getting data failed</comment>
+  </data>
+  <data name="SyncWizardMergingAccounts" xml:space="preserve">
+    <value>Merging accounts...</value>
+    <comment>Prompt text when merging accounts...</comment>
+  </data>
+  <data name="SyncWizardNoDataRetrieved" xml:space="preserve">
+    <value>No data received from device.</value>
+    <comment>Prompt text when no data received</comment>
+  </data>
+  <data name="SyncWizardSavingAccounts" xml:space="preserve">
+    <value>Saving accounts...</value>
+    <comment>Prompt text when saving accounts...</comment>
+  </data>
+  <data name="SyncWizardSendingData" xml:space="preserve">
+    <value>Sending data...</value>
+    <comment>Prompt text when sending data...</comment>
+  </data>
+  <data name="SyncWizardSynchronizationCompleted" xml:space="preserve">
+    <value>Account synchronization completed.</value>
+    <comment>Prompt text when synchronization completed</comment>
+  </data>
+  <data name="SyncWizardSynchronizationFailed" xml:space="preserve">
+    <value>Failed to sync accounts, please try again.</value>
+    <comment>Prompt text when synchronization failed</comment>
+  </data>
+  <data name="TrayBalloonUsabilityCaptionFmt" xml:space="preserve">
+    <value>Your {0} is ready to use.</value>
+    <comment>Shown in the tray icon balloon help that teaches the user about the tray icon. {0} = app name.</comment>
+  </data>
+  <data name="TrayBalloonUsabilityMessageFmt" xml:space="preserve">
+    <value>Open your account securely and in one-click with {0}.</value>
+    <comment>Shown in the tray icon balloon help that teaches the user about the tray icon. {0} = app name.</comment>
+  </data>
+  <data name="InactivityPromptInstructionLine1" xml:space="preserve">
+    <value>Log into all your accounts more safely and easily.</value>
+  </data>
+  <data name="InactivityPromptInstructionLine2" xml:space="preserve">
+    <value>Click on the desktop or tray icon to learn more.</value>
+  </data>
+  <data name="InactivityPromptReadyForUseText" xml:space="preserve">
+    <value>Automatic Login is now ready for use.</value>
+  </data>
+  <data name="S_PhishingWarningCaption" xml:space="preserve">
+    <value>Warning - IP address has not been verified</value>
+    <comment>Phishing warning dialog caption</comment>
+  </data>
+  <data name="InactivityPromptCloseButtonText" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="MasterPINEnterPrompt" xml:space="preserve">
+    <value>Enter Master PIN (4-8 digits)</value>
+    <comment>Master PIN enter prompt text</comment>
+  </data>
+  <data name="AccountAddSpotlightPromptAboveAccountName" xml:space="preserve">
+    <value>Next time, access</value>
+  </data>
+  <data name="AccountAddSpotlightPromptAboveProductIcon" xml:space="preserve">
+    <value>Click on</value>
+  </data>
+  <data name="AccountAddSpotlightPromptBelowAccountName" xml:space="preserve">
+    <value>safer and easier.</value>
+  </data>
+  <data name="AccountAddSpotlightPromptBelowProductIcon" xml:space="preserve">
+    <value>on your desktop or tray.</value>
+  </data>
+  <data name="AccountAddSpotlightPromptNextToCheckmark" xml:space="preserve">
+    <value>Account Added</value>
+  </data>
+  <data name="AppAvailableBalloonTipCaption" xml:space="preserve">
+    <value>Your new account login protection is now available!</value>
+  </data>
+  <data name="AppAvailableBalloonTipMessage" xml:space="preserve">
+    <value>Click here for secure, one-click access to all your accounts and credit cards.</value>
+  </data>
+  <data name="AppAvailableBalloonTipTimeout" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="DashboardBubbleMandatoryFinancialText1" xml:space="preserve">
+    <value>Click the highlighted account for safer and easier access.</value>
+  </data>
+  <data name="DashboardBubbleMandatoryFinancialText2" xml:space="preserve">
+    <value>Always click the desktop or tray icon first and use your account list for safe, easier login.</value>
+  </data>
+  <data name="DashboardBubbleMandatoryOtherHeader" xml:space="preserve">
+    <value>Log In Faster</value>
+  </data>
+  <data name="DashboardBubbleMandatoryOtherText1" xml:space="preserve">
+    <value>Click the highlighted account for easier access.</value>
+  </data>
+  <data name="DashboardBubbleMandatoryOtherText2" xml:space="preserve">
+    <value>Always click the desktop or tray icon first and use your account list for safe, easier login.</value>
+  </data>
+  <data name="DashboardBubbleMandatoryFinancialHeader" xml:space="preserve">
+    <value>Use Safe Login</value>
+  </data>
+  <data name="AccountLoginToastContentText" xml:space="preserve">
+    <value>Select the account you would like to login to:</value>
+  </data>
+  <data name="WCFServerNotStartedErrorMessageFmt" xml:space="preserve">
+    <value>Your {0} has encountered a problem while starting up. Please restart your computer to resolve this issue.</value>
+    <comment>Error message shown when another instance is still running</comment>
+  </data>
+  <data name="ErrorOpeningAccountCaption" xml:space="preserve">
+    <value>Error Opening Account</value>
+    <comment>Message dialog caption when error occurs during opening account</comment>
+  </data>
+  <data name="SiteWasRemovedFromTNErrorMessageFormat" xml:space="preserve">
+    <value>We're sorry, but the account you are trying to access no longer exists in the Trusted Network. The site may have merged with another institution, or gone out of business. 
+
+If this is still a valid account you would like saved to your {0}, please delete the account, and re-add it your vault by logging into the account manually using your default internet browser.</value>
+    <comment>Error message shown when user tries to open an account that its site info has been removed from TN</comment>
+  </data>
+</root>

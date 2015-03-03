@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intime.OPC.Job", "src\Intime.OPC.Job\Intime.OPC.Job.csproj", "{AE30B268-F113-4184-A429-E5F3DE8EAE86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{236CDC21-A83D-4E3D-96FE-F4E9FA6DB6E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intime.OPC.JobScheduler", "src\Intime.OPC.JobScheduler\Intime.OPC.JobScheduler.csproj", "{698ED4D2-4B89-4E10-B716-374546AA9C12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D8B56C86-F426-480D-8C54-29F41607A50D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{ACA25D3B-78CF-4747-A534-82CB20999AAD}"
+	ProjectSection(SolutionItems) = preProject
+		REAMME.md = REAMME.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intime.OPC.Job.Tests", "test\Intime.OPC.Job.Tests\Intime.OPC.Job.Tests.csproj", "{8B43404D-C30C-456D-86F5-0707D9928E05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intime.O2O.ApiClient", "src\Intime.O2O.ApiClient\Intime.O2O.ApiClient.csproj", "{CBA88F6D-45AF-4AF1-9E1E-21E46068974A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intime.O2O.ApiClient.Tests", "test\Intime.O2O.ApiClient.Tests\Intime.O2O.ApiClient.Tests.csproj", "{2FED3504-F90C-456F-A112-27495A49A836}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{9ADDF9EC-F1D8-4830-ADFB-3226EE719020}"
+	ProjectSection(SolutionItems) = preProject
+		libs\Yintai.Architecture.Common.dll = libs\Yintai.Architecture.Common.dll
+		libs\Yintai.Hangzhou.Contract.dll = libs\Yintai.Hangzhou.Contract.dll
+		libs\Yintai.Hangzhou.Service.dll = libs\Yintai.Hangzhou.Service.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intime.OPC.Domain", "src\Intime.OPC.Domain\Intime.OPC.Domain.csproj", "{EA6CBE1B-EBBC-410F-84E0-A7974CFC489F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE30B268-F113-4184-A429-E5F3DE8EAE86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE30B268-F113-4184-A429-E5F3DE8EAE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE30B268-F113-4184-A429-E5F3DE8EAE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE30B268-F113-4184-A429-E5F3DE8EAE86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{698ED4D2-4B89-4E10-B716-374546AA9C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698ED4D2-4B89-4E10-B716-374546AA9C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698ED4D2-4B89-4E10-B716-374546AA9C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{698ED4D2-4B89-4E10-B716-374546AA9C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B43404D-C30C-456D-86F5-0707D9928E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B43404D-C30C-456D-86F5-0707D9928E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B43404D-C30C-456D-86F5-0707D9928E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B43404D-C30C-456D-86F5-0707D9928E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA88F6D-45AF-4AF1-9E1E-21E46068974A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA88F6D-45AF-4AF1-9E1E-21E46068974A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA88F6D-45AF-4AF1-9E1E-21E46068974A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA88F6D-45AF-4AF1-9E1E-21E46068974A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FED3504-F90C-456F-A112-27495A49A836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FED3504-F90C-456F-A112-27495A49A836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FED3504-F90C-456F-A112-27495A49A836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FED3504-F90C-456F-A112-27495A49A836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA6CBE1B-EBBC-410F-84E0-A7974CFC489F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6CBE1B-EBBC-410F-84E0-A7974CFC489F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6CBE1B-EBBC-410F-84E0-A7974CFC489F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6CBE1B-EBBC-410F-84E0-A7974CFC489F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE30B268-F113-4184-A429-E5F3DE8EAE86} = {236CDC21-A83D-4E3D-96FE-F4E9FA6DB6E2}
+		{698ED4D2-4B89-4E10-B716-374546AA9C12} = {236CDC21-A83D-4E3D-96FE-F4E9FA6DB6E2}
+		{8B43404D-C30C-456D-86F5-0707D9928E05} = {D8B56C86-F426-480D-8C54-29F41607A50D}
+		{CBA88F6D-45AF-4AF1-9E1E-21E46068974A} = {236CDC21-A83D-4E3D-96FE-F4E9FA6DB6E2}
+		{2FED3504-F90C-456F-A112-27495A49A836} = {D8B56C86-F426-480D-8C54-29F41607A50D}
+		{EA6CBE1B-EBBC-410F-84E0-A7974CFC489F} = {236CDC21-A83D-4E3D-96FE-F4E9FA6DB6E2}
+	EndGlobalSection
+EndGlobal

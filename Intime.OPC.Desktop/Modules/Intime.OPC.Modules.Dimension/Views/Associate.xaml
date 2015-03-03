@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="Intime.OPC.Modules.Dimension.Views.Associate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resource/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Style="{StaticResource LayoutContainer}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="0" >
+            <GroupBox.Header>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="16" Height="16" >
+                        <Rectangle.Fill>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_magnify}" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock Margin="5,0,0,0">查询</TextBlock>
+                </StackPanel>
+            </GroupBox.Header>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="申请时间"/>
+                    <DatePicker SelectedDate="{Binding QueryCriteria.BeginDate}" />
+                    <TextBlock Text="至" />
+                    <DatePicker SelectedDate="{Binding QueryCriteria.EndDate}" />
+                    <TextBlock Text="门店" />
+                    <ComboBox Width="150" ItemsSource="{Binding Stores}" Height="25" DisplayMemberPath="Value" SelectedValuePath="Key"
+                              SelectedValue="{Binding QueryCriteria.StoreId}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding ReloadDepartmentCommand}"></i:InvokeCommandAction>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ComboBox>
+                    <TextBlock Text="组织结构" />
+                    <ComboBox Width="100" ItemsSource="{Binding Departments}" IsSynchronizedWithCurrentItem="True" Height="25" DisplayMemberPath="Name" SelectedValuePath="Id"
+                              SelectedValue="{Binding QueryCriteria.DepartmentId}" 
+                              SelectedItem="{Binding SelectedDepartment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="专柜码"/>
+                    <TextBox Width="100" Text="{Binding QueryCriteria.SectionCode}" Style="{StaticResource DefaultTextBoxStyle}" />
+                    <TextBlock Text="操作权限" />
+                    <ComboBox Width="100" ItemsSource="{Binding PermissionLevels}" Height="25" DisplayMemberPath="Value" SelectedValuePath="Key"
+                              SelectedValue="{Binding QueryCriteria.OperatePermissions}" />
+                    <Button Command="{Binding QueryCommand}" Style="{StaticResource DefaultButtonStyle}" Content="查询">
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="导购手机"/>
+                    <TextBox Width="120" Text="{Binding QueryCriteria.MobileNo}" Style="{StaticResource DefaultTextBoxStyle}" />
+                    <TextBlock Text="编号" Margin="4"/>
+                    <TextBox Width="120" Text="{Binding QueryCriteria.OperatorCode}" Style="{StaticResource DefaultTextBoxStyle}" />
+                    <TextBlock Text="姓名"/>
+                    <TextBox Width="150" Text="{Binding QueryCriteria.OperatorName}" Style="{StaticResource DefaultTextBoxStyle}" />
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <DockPanel Grid.Row="1" >
+            <StackPanel DockPanel.Dock="Left">
+                <TextBlock Text="申请信息" Style="{StaticResource DataGridName}"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal">
+                    <Button Command="{Binding DemoteCommand}" Style="{DynamicResource MetroCircleButtonStyle}" Height="36" Width="36">
+                        <Rectangle Width="16" Height="16" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_arrow_down}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                    </Button>
+                    <TextBlock Margin="0,0,5,0" HorizontalAlignment="Center">降低用户权限</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Command="{Binding RenotifyCommand}" Style="{DynamicResource MetroCircleButtonStyle}" Height="36" Width="36">
+                        <Rectangle Width="16" Height="16" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_redo_point}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                    </Button>
+                    <TextBlock Margin="0,0,5,0" HorizontalAlignment="Center">重新发送通知</TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+        <DataGrid Grid.Row="2" Name="DataGrid1" ItemsSource="{Binding Associates}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn SortMemberPath="IsSelected" Width="40">
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="selectAll" Command="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=DataContext.SelectAllCommand}" CommandParameter="{Binding ElementName=selectAll, Path=IsChecked}"></CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Margin="8,0,0,0" IsChecked="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="门店" Binding="{Binding StoreName}" />
+                <DataGridTextColumn Header="营业部" Binding="{Binding DepartmentName}" />
+                <DataGridTextColumn Header="专柜码" Binding="{Binding SectionCode}" />
+                <DataGridTextColumn Header="专柜名称" Binding="{Binding SectionName}" />
+                <DataGridTextColumn Header="导购姓名" Binding="{Binding UserNickName}" Width="300"/>
+                <DataGridTextColumn Header="手机号" Binding="{Binding Mobile}" />
+                <DataGridTextColumn Header="权限" Binding="{Binding OperateRightName}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

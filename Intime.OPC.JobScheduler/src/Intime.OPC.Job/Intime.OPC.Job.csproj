@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE30B268-F113-4184-A429-E5F3DE8EAE86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intime.OPC.Job</RootNamespace>
+    <AssemblyName>Intime.OPC.Job</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\..\packages\Quartz.2.2.2\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Composition.AttributedModel">
+      <HintPath>..\..\packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.AttributedModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Convention">
+      <HintPath>..\..\packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.Convention.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Hosting">
+      <HintPath>..\..\packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Runtime">
+      <HintPath>..\..\packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts">
+      <HintPath>..\..\packages\Microsoft.Composition.1.0.20\lib\portable-net45+win8\System.Composition.TypedParts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.1.1\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Yintai.Architecture.Common">
+      <HintPath>..\..\libs\Yintai.Architecture.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yintai.Hangzhou.Contract">
+      <HintPath>..\..\libs\Yintai.Hangzhou.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="Yintai.Hangzhou.Model">
+      <HintPath>..\..\..\Yintai.Hangzhou.Model\obj\Release\Yintai.Hangzhou.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Yintai.Hangzhou.Service">
+      <HintPath>..\..\libs\Yintai.Hangzhou.Service.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IMS\ImsInitializeJob.cs" />
+    <Compile Include="Order\DTO\OrderStatusResultDto.cs" />
+    <Compile Include="Order\OrderStatusSync\AbstractOrderNotificationEntity.cs" />
+    <Compile Include="Order\OrderStatusSync\SaleOrderNotificationStatus.cs" />
+    <Compile Include="Order\OrderStatusSync\SaleOrderNotificationType.cs" />
+    <Compile Include="Order\OrderStatusSync\OrderNotificationException.cs" />
+    <Compile Include="Product\ProductSync\IBrandSizeProcessor.cs" />
+    <Compile Include="Product\ProductSync\IInventorySyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Jobs\ProductStockSyncJob.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Jobs\RawPropertyValueSyncJob.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\BrandSizeProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\InventorySyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\ProductPropertySyncHandler.cs" />
+    <Compile Include="RMASync\AbstractRMANotificationEntity.cs" />
+    <Compile Include="RMASync\AbstractRMASaleStatusProcessor.cs" />
+    <Compile Include="Order\OrderStatusSync\AbstractSaleOrderStatusProcessor.cs" />
+    <Compile Include="RMASync\CashedRMASaleStatusProcessor.cs" />
+    <Compile Include="Order\OrderStatusSync\CashedSaleOrderStatusProcessor.cs" />
+    <Compile Include="Order\OrderStatusSync\CreateOrderNotificationEntity.cs" />
+    <Compile Include="RMASync\CreateRMANotificationEntity.cs" />
+    <Compile Include="RMASync\NoneOperationRMAStatusProcessor.cs" />
+    <Compile Include="Order\OrderStatusSync\NoneOperationStatusProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Order\OrderStatusSync\PaidOrderNotificationEntity.cs" />
+    <Compile Include="RMASync\PaidRMANotificationEntity.cs" />
+    <Compile Include="RMASync\RMA2YintaiJob.cs" />
+    <Compile Include="RMASync\RMANotifyJob.cs" />
+    <Compile Include="RMASync\RMAStatusProcessorFactory.cs" />
+    <Compile Include="RMASync\RMAStatusSyncJob.cs" />
+    <Compile Include="Order\OrderStatusSync\SaleOrderStatusProcessorFactory.cs" />
+    <Compile Include="RMASync\ShoppingGuidePickUpRMASaleStatusProcessor.cs" />
+    <Compile Include="Order\OrderStatusSync\ShoppingGuidePickUpSaleOrderStatusProcessor.cs" />
+    <Compile Include="Order\StockNotExistsException.cs" />
+    <Compile Include="Order\OrderStatusSync\OrderNotifyJob.cs" />
+    <Compile Include="Order\OrderStatusSync\OrderStatusSyncJob.cs" />
+    <Compile Include="Order\Repository\IOrderRemoteRepository.cs" />
+    <Compile Include="Order\Repository\OrderRemoteRepository.cs" />
+    <Compile Include="Product\ProductSync\ICategorySyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\IBrandSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\IChannelMapper.cs" />
+    <Compile Include="Product\ProductSync\Images\ImageSyncJob.cs" />
+    <Compile Include="Product\ProductSync\IProductPicProcessor.cs" />
+    <Compile Include="Product\ProductSync\IProductPropertySyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\IProductSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\ISectionSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\ISkuSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\IStockSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\IStoreSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Models\ChannelMap.cs" />
+    <Compile Include="Product\ProductSync\Models\ChannelMapType.cs" />
+    <Compile Include="Product\ProductSync\Models\ProductPropertyType.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Jobs\ProductPicSyncJob.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Jobs\SectionSyncJob.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Mapper\ChannelMapper.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Jobs\AllSyncJob.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\CategorySyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\BrandSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\ProductPicProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\ProductPropertySyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\ProductSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\StockSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\StoreSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Repository\DTO\BrandDto.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Repository\DTO\ProductDto.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Repository\DTO\ProductImageDto.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Repository\DTO\SectionDto.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Repository\DTO\StoreDto.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Repository\DTO\SupplierDto.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Repository\IRemoteRepository.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Repository\RemoteRepository.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\SectionSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Processors\SkuSyncProcessor.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Synchronizers\AllSynchronizer.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Synchronizers\ProductPicSynchronizer.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Synchronizers\UpdateDateStore.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Synchronizers\IUpdateDateStore.cs" />
+    <Compile Include="Product\ProductSync\Models\PropertyAndValue.cs" />
+    <Compile Include="Product\ProductSync\Supports\Intime\Utils.cs" />
+    <Compile Include="Product\ProductSync\SystemDefine.cs" />
+    <Compile Include="Product\StockAggregate\StockAttregateJob.cs" />
+    <Compile Include="Product\StockAggregate\StockModel.cs" />
+    <Compile Include="Trade\SelfProductOrder\OrderSplitJob.cs" />
+    <Compile Include="Trade\SplitOrder\IOrderStockStore.cs" />
+    <Compile Include="Trade\SplitOrder\IOrderStore.cs" />
+    <Compile Include="Trade\SplitOrder\ISaleOrderStore.cs" />
+    <Compile Include="Trade\SplitOrder\ISplitStrategy.cs" />
+    <Compile Include="Trade\SplitOrder\Models\OrderItemModel.cs" />
+    <Compile Include="Trade\SplitOrder\Models\OrderModel.cs" />
+    <Compile Include="Trade\SplitOrder\Models\SaleOrderModel.cs" />
+    <Compile Include="Trade\SplitOrder\Models\SectionStocksModel.cs" />
+    <Compile Include="Trade\SplitOrder\Models\SpliltResultModel.cs" />
+    <Compile Include="Trade\SplitOrder\Models\StockShortageException.cs" />
+    <Compile Include="Trade\SplitOrder\SplitOrderProcessor.cs" />
+    <Compile Include="Trade\SplitOrder\Supports\DefaultOrderStore.cs" />
+    <Compile Include="Trade\SplitOrder\Supports\DefaultOrderStockStore.cs" />
+    <Compile Include="Trade\SplitOrder\Supports\DefaultSaleOrderStore.cs" />
+    <Compile Include="Trade\SplitOrder\Supports\Strategys\DefaultSplitStrategy.cs" />
+    <Compile Include="Trade\SplitOrder\SystemDefine.cs" />
+    <Compile Include="Trade\SplitOrder\SplitOrderJob.cs" />
+    <Compile Include="Trade\SplitOrder\SplitOrderUtils.cs" />
+    <Compile Include="Trade\SplitOrder\Supports\Strategys\StockShortageSplitStrategy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trade\SplitOrder\Models\SectionSaleDetailInfo.cs" />
+    <Compile Include="Trade\SplitOrder\Supports\Strategys\AbstractSplitStrategy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll">
+      <Link>AutoMapper.Net4.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="job-description.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Compile Include="Order\OrderStatusSync\SaleOrderStatusSyncJob.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intime.O2O.ApiClient\Intime.O2O.ApiClient.csproj">
+      <Project>{cba88f6d-45af-4af1-9e1e-21e46068974a}</Project>
+      <Name>Intime.O2O.ApiClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intime.OPC.Domain\Intime.OPC.Domain.csproj">
+      <Project>{EA6CBE1B-EBBC-410F-84E0-A7974CFC489F}</Project>
+      <Name>Intime.OPC.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

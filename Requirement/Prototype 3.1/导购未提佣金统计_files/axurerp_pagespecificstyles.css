@@ -1,0 +1,2073 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+#u0 {
+    position:absolute;
+    left:615px;
+    top:162px;
+    width:184px;
+    height:154px;
+    overflow:hidden;
+}
+
+#pd0u0 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:184px;
+    height:154px;
+    
+}
+
+.u1_normal {
+    background-image: url('../导购未提佣金统计_files/u1_normal.png');
+}
+
+.u1_container {
+    position:absolute;
+    left:297px;
+    top:0px;
+    width:1px;
+    height:1px;
+}
+
+#u1_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1px;
+    height:1px;
+}
+
+.u2 {
+    position:absolute;
+    left:2px;
+    top:-8px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u3_normal {
+    background-image: url('../导购未提佣金统计_files/u3_normal.png');
+}
+
+.u3_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:183px;
+    height:153px;
+}
+
+#u3_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:183px;
+    height:153px;
+}
+
+.u4 {
+    position:absolute;
+    left:2px;
+    top:68px;
+    width:179px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u5 {
+    position:absolute;
+    left:483px;
+    top:162px;
+    width:184px;
+    height:154px;
+    overflow:hidden;
+}
+
+#pd0u5 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:184px;
+    height:154px;
+    
+}
+
+.u6_normal {
+    background-image: url('../导购未提佣金统计_files/u1_normal.png');
+}
+
+.u6_container {
+    position:absolute;
+    left:297px;
+    top:0px;
+    width:1px;
+    height:1px;
+}
+
+#u6_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1px;
+    height:1px;
+}
+
+.u7 {
+    position:absolute;
+    left:2px;
+    top:-8px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u8_normal {
+    background-image: url('../导购未提佣金统计_files/u3_normal.png');
+}
+
+.u8_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:183px;
+    height:153px;
+}
+
+#u8_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:183px;
+    height:153px;
+}
+
+.u9 {
+    position:absolute;
+    left:2px;
+    top:68px;
+    width:179px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u10_normal {
+    background-image: url('../导购未提佣金统计_files/u10_normal.png');
+}
+
+.u10_container {
+    position:absolute;
+    left:205px;
+    top:-206px;
+    width:2041px;
+    height:1206px;
+}
+
+#u10_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:2047px;
+    height:1212px;
+}
+
+.u11 {
+    position:absolute;
+    left:2px;
+    top:595px;
+    width:2037px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12_normal {
+    background-image: url('../导购未提佣金统计_files/u12_normal.png');
+}
+
+.u12_container {
+    position:absolute;
+    left:150px;
+    top:0px;
+    width:2096px;
+    height:80px;
+}
+
+#u12_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:2102px;
+    height:86px;
+}
+
+.u13 {
+    position:absolute;
+    left:2px;
+    top:32px;
+    width:2092px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u14_normal {
+    background-image: url('../导购未提佣金统计_files/u14_normal.png');
+}
+
+.u14_container {
+    position:absolute;
+    left:390px;
+    top:80px;
+    width:1856px;
+    height:50px;
+}
+
+#u14_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1862px;
+    height:56px;
+}
+
+.u15 {
+    position:absolute;
+    left:2px;
+    top:17px;
+    width:1852px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u16_normal {
+    background-image: url('../导购未提佣金统计_files/u16_normal.png');
+}
+
+.u16_container {
+    position:absolute;
+    left:390px;
+    top:130px;
+    width:1856px;
+    height:41px;
+}
+
+#u16_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1862px;
+    height:47px;
+}
+
+.u17 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:1852px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u18 {
+    position:absolute;
+    left:410px;
+    top:94px;
+    width:220px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u19_normal {
+    background-image: url('../导购未提佣金统计_files/u19_normal.png');
+}
+
+.u19_container {
+    position:absolute;
+    left:390px;
+    top:171px;
+    width:1856px;
+    height:20px;
+}
+
+#u19_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1862px;
+    height:26px;
+}
+
+.u20 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:1852px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u21_normal {
+    background-image: url('../导购未提佣金统计_files/u21_normal.png');
+}
+
+.u21_container {
+    position:absolute;
+    left:390px;
+    top:191px;
+    width:40px;
+    height:17px;
+}
+
+#u21_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:23px;
+}
+
+.u22 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:36px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u23_normal {
+    background-image: url('../导购未提佣金统计_files/u23_normal.png');
+}
+
+.u23_container {
+    position:absolute;
+    left:390px;
+    top:208px;
+    width:40px;
+    height:23px;
+}
+
+#u23_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:29px;
+}
+
+.u24 {
+    position:absolute;
+    left:2px;
+    top:3px;
+    width:36px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25_normal {
+    background-image: url('../导购未提佣金统计_files/u25_normal.png');
+}
+
+.u25_container {
+    position:absolute;
+    left:150px;
+    top:80px;
+    width:240px;
+    height:920px;
+}
+
+#u25_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:246px;
+    height:926px;
+}
+
+.u26 {
+    position:absolute;
+    left:2px;
+    top:452px;
+    width:236px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u27_normal {
+    background-image: url('../导购未提佣金统计_files/u27_normal.png');
+}
+
+.u27_container {
+    position:absolute;
+    left:430px;
+    top:191px;
+    width:85px;
+    height:17px;
+}
+
+#u27_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:23px;
+}
+
+.u28 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u29_normal {
+    background-image: url('../导购未提佣金统计_files/u29_normal.png');
+}
+
+.u29_container {
+    position:absolute;
+    left:430px;
+    top:208px;
+    width:85px;
+    height:23px;
+}
+
+#u29_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:29px;
+}
+
+.u30 {
+    position:absolute;
+    left:2px;
+    top:3px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31_normal {
+    background-image: url('../导购未提佣金统计_files/u31_normal.png');
+}
+
+.u31_container {
+    position:absolute;
+    left:515px;
+    top:191px;
+    width:140px;
+    height:17px;
+}
+
+#u31_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:146px;
+    height:23px;
+}
+
+.u32 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:136px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u33_normal {
+    background-image: url('../导购未提佣金统计_files/u33_normal.png');
+}
+
+.u33_container {
+    position:absolute;
+    left:515px;
+    top:208px;
+    width:140px;
+    height:23px;
+}
+
+#u33_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:146px;
+    height:29px;
+}
+
+.u34 {
+    position:absolute;
+    left:2px;
+    top:3px;
+    width:136px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u35 {
+    position:absolute;
+    left:2090px;
+    top:94px;
+    width:60px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'微软雅黑';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u36 {
+    position:absolute;
+    left:2170px;
+    top:94px;
+    width:60px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'微软雅黑';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u37 {
+    position:absolute;
+    left:1510px;
+    top:139px;
+    width:60px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'微软雅黑';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u38_line {
+    background-image: url('../导购未提佣金统计_files/u38_line.png');
+}
+
+.u38_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:220px;
+    height:3px;
+}
+
+.u38 {
+    position:absolute;
+    left:160px;
+    top:979px;
+    width:220px;
+    height:10px;
+    
+}
+
+.u39 {
+    position:absolute;
+    left:160px;
+    top:947px;
+    width:220px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u40_line {
+    background-image: url('../导购未提佣金统计_files/u40_line.png');
+}
+
+.u40_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:220px;
+    height:3px;
+}
+
+.u40 {
+    position:absolute;
+    left:160px;
+    top:121px;
+    width:220px;
+    height:10px;
+    
+}
+
+.u41 {
+    position:absolute;
+    left:160px;
+    top:90px;
+    width:220px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u42_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u42_container {
+    position:absolute;
+    left:160px;
+    top:141px;
+    width:220px;
+    height:30px;
+}
+
+#u42_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u43 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u44_line {
+    background-image: url('../导购未提佣金统计_files/u44_line.png');
+}
+
+.u44_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:220px;
+    height:3px;
+}
+
+.u44 {
+    position:absolute;
+    left:160px;
+    top:466px;
+    width:220px;
+    height:10px;
+    
+}
+
+.u45 {
+    position:absolute;
+    left:160px;
+    top:434px;
+    width:220px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u46_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u46_container {
+    position:absolute;
+    left:160px;
+    top:486px;
+    width:220px;
+    height:30px;
+}
+
+#u46_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u47 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u48_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u48_container {
+    position:absolute;
+    left:160px;
+    top:183px;
+    width:220px;
+    height:30px;
+}
+
+#u48_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u49 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u50_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u50_container {
+    position:absolute;
+    left:160px;
+    top:226px;
+    width:220px;
+    height:30px;
+}
+
+#u50_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u51 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u52_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u52_container {
+    position:absolute;
+    left:160px;
+    top:526px;
+    width:220px;
+    height:30px;
+}
+
+#u52_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u53 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u54_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u54_container {
+    position:absolute;
+    left:160px;
+    top:566px;
+    width:220px;
+    height:30px;
+}
+
+#u54_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u55 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u56_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u56_container {
+    position:absolute;
+    left:160px;
+    top:606px;
+    width:220px;
+    height:30px;
+}
+
+#u56_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u57 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u58_line {
+    background-image: url('../导购未提佣金统计_files/u58_line.png');
+}
+
+.u58_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:220px;
+    height:3px;
+}
+
+.u58 {
+    position:absolute;
+    left:160px;
+    top:694px;
+    width:220px;
+    height:10px;
+    
+}
+
+.u59 {
+    position:absolute;
+    left:160px;
+    top:662px;
+    width:220px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u60_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u60_container {
+    position:absolute;
+    left:160px;
+    top:714px;
+    width:220px;
+    height:30px;
+}
+
+#u60_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u61 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u62_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u62_container {
+    position:absolute;
+    left:160px;
+    top:754px;
+    width:220px;
+    height:30px;
+}
+
+#u62_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u63 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u64_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u64_container {
+    position:absolute;
+    left:160px;
+    top:794px;
+    width:220px;
+    height:30px;
+}
+
+#u64_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u65 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u66_line {
+    background-image: url('../导购未提佣金统计_files/u66_line.png');
+}
+
+.u66_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:220px;
+    height:3px;
+}
+
+.u66 {
+    position:absolute;
+    left:160px;
+    top:881px;
+    width:220px;
+    height:10px;
+    
+}
+
+.u67 {
+    position:absolute;
+    left:160px;
+    top:849px;
+    width:220px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u68_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u68_container {
+    position:absolute;
+    left:160px;
+    top:901px;
+    width:220px;
+    height:30px;
+}
+
+#u68_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u69 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u70_normal {
+    background-image: url('../导购未提佣金统计_files/u42_normal.png');
+}
+
+.u70_container {
+    position:absolute;
+    left:160px;
+    top:941px;
+    width:220px;
+    height:30px;
+}
+
+#u70_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:226px;
+    height:36px;
+}
+
+.u71 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:216px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u72 {
+    position:absolute;
+    left:184px;
+    top:268px;
+    width:196px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u73_normal {
+    background-image: url('../导购未提佣金统计_files/u73_normal.png');
+}
+
+.u73_container {
+    position:absolute;
+    left:160px;
+    top:271px;
+    width:15px;
+    height:15px;
+}
+
+#u73_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:21px;
+    height:21px;
+}
+
+.u74 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:11px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u75 {
+    position:absolute;
+    left:184px;
+    top:325px;
+    width:196px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u76_normal {
+    background-image: url('../导购未提佣金统计_files/u73_normal.png');
+}
+
+.u76_container {
+    position:absolute;
+    left:160px;
+    top:328px;
+    width:15px;
+    height:15px;
+}
+
+#u76_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:21px;
+    height:21px;
+}
+
+.u77 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:11px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u78 {
+    position:absolute;
+    left:184px;
+    top:354px;
+    width:196px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u79_normal {
+    background-image: url('../导购未提佣金统计_files/u73_normal.png');
+}
+
+.u79_container {
+    position:absolute;
+    left:160px;
+    top:357px;
+    width:15px;
+    height:15px;
+}
+
+#u79_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:21px;
+    height:21px;
+}
+
+.u80 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:11px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u81 {
+    position:absolute;
+    left:184px;
+    top:381px;
+    width:196px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u82_normal {
+    background-image: url('../导购未提佣金统计_files/u73_normal.png');
+}
+
+.u82_container {
+    position:absolute;
+    left:160px;
+    top:384px;
+    width:15px;
+    height:15px;
+}
+
+#u82_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:21px;
+    height:21px;
+}
+
+.u83 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:11px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u84 {
+    position:absolute;
+    left:184px;
+    top:296px;
+    width:196px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u85_normal {
+    background-image: url('../导购未提佣金统计_files/u73_normal.png');
+}
+
+.u85_container {
+    position:absolute;
+    left:160px;
+    top:299px;
+    width:15px;
+    height:15px;
+}
+
+#u85_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:21px;
+    height:21px;
+}
+
+.u86 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:11px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u87 {
+    position:absolute;
+    left:412px;
+    top:140px;
+    width:70px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u88 {
+    position:absolute;
+    left:452px;
+    top:140px;
+    width:100px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:'微软雅黑';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u90 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u91 {
+    position:absolute;
+    left:595px;
+    top:140px;
+    width:87px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u92 {
+    position:absolute;
+    left:685px;
+    top:138px;
+    width:180px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'微软雅黑';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u93_normal {
+    background-image: url('../导购未提佣金统计_files/u27_normal.png');
+}
+
+.u93_container {
+    position:absolute;
+    left:655px;
+    top:191px;
+    width:85px;
+    height:17px;
+}
+
+#u93_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:23px;
+}
+
+.u94 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u95_normal {
+    background-image: url('../导购未提佣金统计_files/u29_normal.png');
+}
+
+.u95_container {
+    position:absolute;
+    left:655px;
+    top:208px;
+    width:85px;
+    height:23px;
+}
+
+#u95_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:29px;
+}
+
+.u96 {
+    position:absolute;
+    left:2px;
+    top:3px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u97_normal {
+    background-image: url('../导购未提佣金统计_files/u27_normal.png');
+}
+
+.u97_container {
+    position:absolute;
+    left:740px;
+    top:191px;
+    width:85px;
+    height:17px;
+}
+
+#u97_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:23px;
+}
+
+.u98 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u99_normal {
+    background-image: url('../导购未提佣金统计_files/u29_normal.png');
+}
+
+.u99_container {
+    position:absolute;
+    left:740px;
+    top:208px;
+    width:85px;
+    height:23px;
+}
+
+#u99_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:29px;
+}
+
+.u100 {
+    position:absolute;
+    left:2px;
+    top:3px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u101_normal {
+    background-image: url('../导购未提佣金统计_files/u27_normal.png');
+}
+
+.u101_container {
+    position:absolute;
+    left:980px;
+    top:191px;
+    width:85px;
+    height:17px;
+}
+
+#u101_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:23px;
+}
+
+.u102 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u103_normal {
+    background-image: url('../导购未提佣金统计_files/u29_normal.png');
+}
+
+.u103_container {
+    position:absolute;
+    left:980px;
+    top:208px;
+    width:85px;
+    height:23px;
+}
+
+#u103_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:29px;
+}
+
+.u104 {
+    position:absolute;
+    left:2px;
+    top:3px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u105_normal {
+    background-image: url('../导购未提佣金统计_files/u105_normal.png');
+}
+
+.u105_container {
+    position:absolute;
+    left:1065px;
+    top:191px;
+    width:155px;
+    height:17px;
+}
+
+#u105_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:161px;
+    height:23px;
+}
+
+.u106 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:151px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u107_normal {
+    background-image: url('../导购未提佣金统计_files/u107_normal.png');
+}
+
+.u107_container {
+    position:absolute;
+    left:1065px;
+    top:208px;
+    width:155px;
+    height:23px;
+}
+
+#u107_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:161px;
+    height:29px;
+}
+
+.u108 {
+    position:absolute;
+    left:2px;
+    top:3px;
+    width:151px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u109_normal {
+    background-image: url('../导购未提佣金统计_files/u27_normal.png');
+}
+
+.u109_container {
+    position:absolute;
+    left:1220px;
+    top:191px;
+    width:85px;
+    height:17px;
+}
+
+#u109_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:23px;
+}
+
+.u110 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u111_normal {
+    background-image: url('../导购未提佣金统计_files/u29_normal.png');
+}
+
+.u111_container {
+    position:absolute;
+    left:1220px;
+    top:208px;
+    width:85px;
+    height:23px;
+}
+
+#u111_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:29px;
+}
+
+.u112 {
+    position:absolute;
+    left:2px;
+    top:3px;
+    width:81px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u113_normal {
+    background-image: url('../导购未提佣金统计_files/u105_normal.png');
+}
+
+.u113_container {
+    position:absolute;
+    left:825px;
+    top:191px;
+    width:155px;
+    height:17px;
+}
+
+#u113_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:161px;
+    height:23px;
+}
+
+.u114 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:151px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u115_normal {
+    background-image: url('../导购未提佣金统计_files/u107_normal.png');
+}
+
+.u115_container {
+    position:absolute;
+    left:825px;
+    top:208px;
+    width:155px;
+    height:23px;
+}
+
+#u115_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:161px;
+    height:29px;
+}
+
+.u116 {
+    position:absolute;
+    left:2px;
+    top:3px;
+    width:151px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u118 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u119 {
+    position:absolute;
+    left:910px;
+    top:141px;
+    width:87px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u120 {
+    position:absolute;
+    left:1000px;
+    top:139px;
+    width:180px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'微软雅黑';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u122 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:1px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u123 {
+    position:absolute;
+    left:1225px;
+    top:141px;
+    width:87px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u124 {
+    position:absolute;
+    left:1315px;
+    top:139px;
+    width:180px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'微软雅黑';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+

@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<job-scheduling-data xmlns="http://quartznet.sourceforge.net/JobSchedulingData"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 				version="2.0">
+
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+  <!--退货单状态同步任务-->
+  <!--<schedule>
+    <trigger>
+      <cron>
+        <name>RMAStatusSyncJobTigger</name>
+        <group>RMAStatusSyncJobTiggerGroup</group>
+        <description>退货单状态同步任务触发器</description>
+        <job-name>RMAStatusSyncJob</job-name>
+        <job-group>RMAStatusSyncJobGroup</job-group>
+        <misfire-instruction>SmartPolicy</misfire-instruction>
+        <cron-expression>0 0/2 * * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <job>
+      <name>RMAStatusSyncJob</name>
+      <group>RMAStatusSyncJobGroup</group>
+      <description>退货单状态同步任务</description>
+      <job-type>Intime.OPC.Job.RMASync.RMAStatusSyncJob, Intime.OPC.Job</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+  </schedule>-->
+
+  <!--订单通知任务-->
+  <!--<schedule>
+    <trigger>
+      <cron>
+        <name>RMANotifyJobTigger</name>
+        <group>RMANotifyJobTiggerGroup</group>
+        <description>退货单状态同步任务触发器</description>
+        <job-name>RMANotifyJob</job-name>
+        <job-group>RMANotifyJobGroup</job-group>
+        <misfire-instruction>SmartPolicy</misfire-instruction>
+        <cron-expression>0 1/3 * * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <job>
+      <name>RMANotifyJob</name>
+      <group>RMANotifyJobGroup</group>
+      <description>退货单状态同步任务</description>
+      <job-type>Intime.OPC.Job.RMASync.RMANotifyJob, Intime.OPC.Job</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+  </schedule>-->
+
+  <!--退货单同步至银泰网任务-->
+  <!--<schedule>
+    <trigger>
+      <cron>
+        <name>RMA2YintaiJobTigger</name>
+        <group>RMA2YintaiJobTiggerGroup</group>
+        <description>退货单同步至银泰网job</description>
+        <job-name>RMA2YintaiJob</job-name>
+        <job-group>RMA2YintaiJobGroup</job-group>
+        <misfire-instruction>SmartPolicy</misfire-instruction>
+        <cron-expression>0 13/30 * * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <job>
+      <name>RMA2YintaiJob</name>
+      <group>RMA2YintaiJobGroup</group>
+      <description>商品属性同步任务</description>
+      <job-type>Intime.OPC.Job.RMASync.RMA2YintaiJob, Intime.OPC.Job</job-type>
+      <durable>false</durable>
+      <recover>false</recover>
+      <job-data-map>
+        <entry>
+          <key>benchdate</key>
+          <value>2014/5/19</value>
+        </entry>
+        <entry>
+          <key>intervalofmins</key>
+          <value>60</value>
+        </entry>
+      </job-data-map>
+    </job>
+  </schedule>-->
+
+
+  <!--商品属性同同步任务-->
+  <!--<schedule>
+    <trigger>
+      <cron>
+        <name>ProductPropertySyncJobTigger</name>
+        <group>ProductPropertySyncJobTiggerGroup</group>
+        <description>商品属性同步job</description>
+        <job-name>ProductPropertySyncJob</job-name>
+        <job-group>ProductPropertySyncGroup</job-group>
+        <misfire-instruction>SmartPolicy</misfire-instruction>
+        <cron-expression>0 0 0/1 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <job>
+      <name>ProductPropertySyncJob</name>
+      <group>ProductPropertySyncGroup</group>
+      <description>商品属性同步任务</description>
+      <job-type>Intime.OPC.Job.Product.ProductSync.Supports.Intime.Jobs.ProductPropertySyncJob, Intime.OPC.Job</job-type>
+      <durable>false</durable>
+      <recover>false</recover>
+      <job-data-map>
+        <entry>
+          <key>isRebuild</key>
+          <value>false</value>
+        </entry>
+        <entry>
+          <key>benchdate</key>
+          <value>2014/4/22</value>
+        </entry>
+        <entry>
+          <key>intervalofhrs</key>
+          <value>2</value>
+        </entry>
+      </job-data-map>
+    </job>
+  </schedule>-->
+  <!--自拍商品拆单任务-->
+  <!--<schedule>
+    <trigger>
+      <cron>
+        <name>SelfProductOrderSplitJobTigger</name>
+        <group>SelfProductOrderSplitJobGroup</group>
+        <description>自拍商品拆单</description>
+        <job-name>SelfProductOrderSplitJob</job-name>
+        <job-group>SelfProductOrderSplitJobGroup</job-group>
+        <misfire-instruction>SmartPolicy</misfire-instruction>
+        <cron-expression>0 0/10 * * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <job>
+      <name>SelfProductOrderSplitJob</name>
+      <group>SelfProductOrderSplitJobGroup</group>
+      <description>自拍商品拆单job</description>
+      <job-type>Intime.OPC.Job.Trade.SelfProductOrder.OrderSplitJob, Intime.OPC.Job</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+  </schedule>-->
+
+  <!--专柜列表同步任务-->
+  <!--<schedule>
+    <trigger>
+      <cron>
+        <name>SetionListSyncJobTigger</name>
+        <group>OrderStatusTiggerGroup</group>
+        <description>专柜列表同步</description>
+        <job-name>SectionListSyncJob</job-name>
+        <job-group>SectionListSyncJobGroup</job-group>
+        <misfire-instruction>SmartPolicy</misfire-instruction>
+        <cron-expression>0 0/10 * * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <job>
+      <name>SectionListSyncJob</name>
+      <group>SectionListSyncJobGroup</group>
+      <description>专柜列表同步job</description>
+      <job-type>Intime.OPC.Job.Product.ProductSync.Supports.Intime.Jobs.SectionSyncJob, Intime.OPC.Job</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+  </schedule>-->
+
+  <!--订单状态同步任务-->
+  <!--<schedule>
+        <trigger>
+            <cron>
+                <name>OrderStatusJobTigger</name>
+                <group>OrderStatusTiggerGroup</group>
+                <description>订单状态同步任务触发器</description>
+                <job-name>OrderStatusJob</job-name>
+                <job-group>OrderStatusGroup</job-group>
+                <misfire-instruction>SmartPolicy</misfire-instruction>
+                <cron-expression>0/30 * * * * ?</cron-expression>
+            </cron>
+        </trigger>
+        <job>
+            <name>OrderStatusJob</name>
+            <group>OrderStatusGroup</group>
+            <description>订单状态同步任务</description>
+            <job-type>Intime.OPC.Job.Order.OrderStatusSync.SaleOrderStatusSyncJob, Intime.OPC.Job</job-type>
+            <durable>true</durable>
+            <recover>false</recover>
+        </job>
+    </schedule>-->
+
+  <!--订单通知任务-->
+  <schedule>
+    <trigger>
+      <cron>
+        <name>OrderNotifyJobTigger</name>
+        <group>OrderNotifyJobTiggerGroup</group>
+        <description>订单状态同步任务触发器</description>
+        <job-name>OrderNotifyJob</job-name>
+        <job-group>OrderNotifyJobGroup</job-group>
+        <misfire-instruction>SmartPolicy</misfire-instruction>
+        <cron-expression>0 0/1 10-21 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <job>
+      <name>OrderNotifyJob</name>
+      <group>OrderNotifyJobGroup</group>
+      <description>订单状态同步任务</description>
+      <job-type>Intime.OPC.Job.Order.OrderStatusSync.OrderNotifyJob, Intime.OPC.Job</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+      <job-data-map>
+        <entry>
+          <key>cashingBeginTime</key>
+          <value>1:00:00</value>
+        </entry>
+        <entry>
+          <key>cashingEndTime</key>
+          <value>1:50:00</value>
+        </entry>
+        <entry>
+          <key>enableCashingTimeRange</key>
+          <value>false</value>
+        </entry>
+      </job-data-map>
+    </job>
+  </schedule>
+
+  <!--库存叠加job-->
+  <!--<schedule>
+        <trigger>
+            <cron>
+                <name>StockAttregateJobTigger</name>
+                <group>StockAttregateJobTiggerGroup</group>
+                <description>库存叠加JOB同步任务触发器</description>
+                <job-name>StockAttregateJob</job-name>
+                <job-group>StockAttregateJob</job-group>
+                <misfire-instruction>SmartPolicy</misfire-instruction>
+                <cron-expression>0 0/5 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+        <job>
+            <name>StockAttregateJob</name>
+            <group>StockAttregateJob</group>
+            <description>库存叠加JOB</description>
+            <job-type>Intime.OPC.Job.Product.StockAggregate.StockAttregateJob, Intime.OPC.Job</job-type>
+            <durable>true</durable>
+            <recover>false</recover>
+        </job>
+    </schedule>-->
+
+  <!--拆单任务-->
+  <!--<schedule>
+        <trigger>
+            <cron>
+                <name>SpitOrderTigger</name>
+                <group>SpitOrderTiggerGroup</group>
+                <description>拆单任务触发器</description>
+                <job-name>SpitOrderJob</job-name>
+                <job-group>SpitOrderJobGroup</job-group>
+                <misfire-instruction>SmartPolicy</misfire-instruction>
+                <cron-expression>0/3 * * * * ?</cron-expression>
+            </cron>
+        </trigger>
+        <job>
+            <name>SpitOrderJob</name>
+            <group>SpitOrderJobGroup</group>
+            <description>拆单任务</description>
+            <job-type>Intime.OPC.Job.Trade.SplitOrder.SplitOrderJob, Intime.OPC.Job</job-type>
+            <durable>true</durable>
+            <recover>false</recover>
+        </job>
+    </schedule>-->
+
+  <!--商品同步任务-->
+  <!--<schedule>
+        <trigger>
+            <cron>
+                <name>ProductSyncTigger</name>
+                <group>ProductSyncTiggerGroup</group>
+                <description>商品同步触发器</description>
+                <job-name>ProductSyncJob</job-name>
+                <job-group>ProductSyncJobGroup</job-group>
+                <misfire-instruction>SmartPolicy</misfire-instruction>
+                <cron-expression>0 0/30 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+        <job>
+            <name>ProductSyncJob</name>
+            <group>ProductSyncJobGroup</group>
+            <description>商品全量同步</description>
+            <job-type>Intime.OPC.Job.Product.ProductSync.Supports.Intime.Jobs.AllSyncJob, Intime.OPC.Job</job-type>
+            <durable>true</durable>
+            <recover>false</recover>
+        </job>
+    </schedule>-->
+
+  <!--商品图片同步任务-->
+  <!--<schedule>
+        <trigger>
+            <cron>
+                <name>ProductPicSyncTigger</name>
+                <group>ProductPicSyncTiggerGroup</group>
+                <description>商品图片更新触发器</description>
+                <job-name>ProductPicSyncJob</job-name>
+                <job-group>ProductPicSyncJobGroup</job-group>
+                <misfire-instruction>SmartPolicy</misfire-instruction>
+                <cron-expression>0 0/30 * * * ?</cron-expression>
+            </cron>
+        </trigger>
+        <job>
+            <name>ProductPicSyncJob</name>
+            <group>ProductPicSyncJobGroup</group>
+            <description>商品图片更新</description>
+            <job-type>Intime.OPC.Job.Product.ProductSync.Supports.Intime.Jobs.ProductPicSyncJob, Intime.OPC.Job</job-type>
+            <durable>true</durable>
+            <recover>false</recover>
+        </job>
+    </schedule>-->
+
+
+
+</job-scheduling-data>

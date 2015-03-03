@@ -1,0 +1,78 @@
+﻿<controls:MetroWindow x:Class="Intime.OPC.Modules.Authority.Views.UserUpdatePwd"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:customControlLibrary="clr-namespace:Intime.OPC.CustomControls;assembly=Intime.OPC.CustomControls"
+                      Title="密码修改" Height="300" Width="450" GlowBrush="Blue" Background="LightGray"
+                      ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Background="LightGray">
+
+                <Button Background="LightGray" Width="Auto" Command="{Binding CancelCommand}">
+                    <StackPanel>
+                        <Image Source="/Image/删除.png" Stretch="None" />
+                        <TextBlock FontFamily="雅黑" FontSize="18" HorizontalAlignment="Center">取消</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Background="LightGray" Width="Auto" Command="{Binding OkCommand}">
+                    <StackPanel>
+                        <Image Source="/Image/保存.png" Stretch="None" />
+                        <TextBlock FontFamily="雅黑" FontSize="18" HorizontalAlignment="Center">保存</TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="0" Grid.Row="0" Background="LightGray" Margin="10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="90" Text="用户名" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        <TextBox Foreground="Blue" Width="350" Height="25" IsEnabled="False" Text="{Binding Model.LogonName}"
+                                 Margin="0,4" />
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="0" Background="LightGray" Margin="10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="90" Text="新密码" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <PasswordBox Width="350" Height="25" customControlLibrary:PasswordBoxHelper.Attach="True"
+                                     customControlLibrary:PasswordBoxHelper.Password="{Binding Path= Model.NewPassword,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </Grid>
+
+
+                <Grid Grid.Row="2" Grid.Column="0" Background="LightGray" Margin="10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="90" Text="确认密码" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <PasswordBox Width="350" Height="25" customControlLibrary:PasswordBoxHelper.Attach="True"
+                                     customControlLibrary:PasswordBoxHelper.Password="{Binding Path= Model.RePassword,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </Grid>
+
+
+            </Grid>
+
+        </Grid>
+
+
+    </Grid>
+
+
+</controls:MetroWindow>

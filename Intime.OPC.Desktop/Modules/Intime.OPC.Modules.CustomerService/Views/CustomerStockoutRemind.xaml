@@ -1,0 +1,26 @@
+﻿<UserControl xmlns:Views="clr-namespace:Intime.OPC.Modules.CustomerService.Views" x:Class="Intime.OPC.Modules.CustomerService.Views.CustomerStockoutRemind"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:si="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+             Height="AUTO" Width="AUTO">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resource/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <TabControl Grid.Row="0" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+            <TabItem Header="订单信息"  VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Views:CustomerStockoutRemindCommon DataContext="{Binding CustomerStockoutRemindCommonViewModel}"/>
+            </TabItem>
+            <TabItem Header="已取消订单（无法补货）"  VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Views:CustomerStockoutRemindNotReplenish DataContext="{Binding CustomerStockoutRemindNotReplenishViewModel}"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

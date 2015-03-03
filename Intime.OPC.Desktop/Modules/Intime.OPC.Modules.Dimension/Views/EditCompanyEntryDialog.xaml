@@ -1,0 +1,81 @@
+﻿<Window x:Class="OPCApp.BasicsManage.Views.EditCompanyEntryDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        ShowInTaskbar="True" Title="快递公司编辑" Height="400" Width="350"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <GroupBox  Grid.Row="0"  
+          Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource AncestorType=Grid,Mode=FindAncestor}}" 
+          VerticalAlignment="Top" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="29*" />
+                    <RowDefinition Height="29*" />
+                    <RowDefinition Height="29*" />
+                    <RowDefinition Height="29*" />
+                    <RowDefinition Height="29*" />
+                    <RowDefinition Height="29*" />
+                    <RowDefinition Height="29*" />
+                    <RowDefinition Height="29*" />
+                    <RowDefinition Height="29*" />
+                    <RowDefinition Height="28*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*" />
+                    <ColumnDefinition Width="100*" />
+                    <ColumnDefinition Width="100*" />
+                </Grid.ColumnDefinitions>
+                <Label Content="公司名：" HorizontalContentAlignment="Right" 
+                       VerticalAlignment="Center" Grid.Row="1"  />
+                <TextBox Text="{Binding editCompanyEntry.ExpressName, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" BorderBrush="Black" BorderThickness="1"
+                         Grid.Row="1" VerticalAlignment="Center" Margin="2,0,2,0"/>
+                <Label Content="快递类型：" HorizontalContentAlignment="Right"
+                       VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Margin="2,0,2,0"/>
+                <ComboBox ItemsSource="{Binding expressTypeList,Mode=TwoWay}" Grid.Column="1"  Grid.Row="2" 
+                          VerticalAlignment="Center" Margin="2,0,2,0" SelectedValuePath="ID" 
+                          DisplayMemberPath="Info" SelectedIndex ="{Binding selectedExpressType,Mode=TwoWay}">
+                </ComboBox>
+                <Label Content="地址：" HorizontalContentAlignment="Right" 
+                       VerticalAlignment="Center" Grid.Row="3" Grid.Column="0"  />
+                <TextBox Text="{Binding editCompanyEntry.Address,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" BorderBrush="Black" BorderThickness="1"
+                         Grid.Row="3" VerticalAlignment="Center" Margin="2,0,2,0"/>
+                <Label Content="联系人：" HorizontalContentAlignment="Right" 
+                       VerticalAlignment="Center" Grid.Row="4" Grid.Column="0"  />
+                <TextBox Text="{Binding editCompanyEntry.ContractName, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" BorderBrush="Black" BorderThickness="1"
+                         Grid.Row="4" VerticalAlignment="Center" Margin="2,0,2,0"/>
+                <Label Content="电话：" HorizontalContentAlignment="Right" 
+                       VerticalAlignment="Center" Grid.Row="5" Grid.Column="0"  />
+                <TextBox Text="{Binding editCompanyEntry.ContractPhone,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" BorderBrush="Black" BorderThickness="1"
+                         Grid.Row="5" VerticalAlignment="Center" Margin="2,0,2,0"/>
+                <Label Content="是否启用：" HorizontalContentAlignment="Right" 
+                       VerticalAlignment="Center" Grid.Row="6" Grid.Column="0"  />
+                <CheckBox Grid.Row="6" Grid.Column="1"
+                          HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" 
+                          IsChecked="{Binding isEnabled,Mode=TwoWay}" />
+                <Label Content="打印模板：" HorizontalContentAlignment="Right" 
+                       VerticalAlignment="Center" Grid.Row="7" Grid.Column="0"  />
+                <TextBox Text="{Binding editCompanyEntry.PrintTemplate,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" BorderBrush="Black" BorderThickness="1"
+                         Grid.Row="7" VerticalAlignment="Center" Margin="2,0,2,0"/>
+                <Label Content="合同编号：" HorizontalContentAlignment="Right" 
+                       VerticalAlignment="Center" Grid.Row="8" Grid.Column="0"  />
+                <TextBox Text="{Binding editCompanyEntry.ContractNumber,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" BorderBrush="Black" BorderThickness="1"
+                         Grid.Row="8" VerticalAlignment="Center" Margin="2,0,2,0"/>
+                <Label Content="配送方式：" HorizontalContentAlignment="Right" 
+                       VerticalAlignment="Center" Grid.Row="9" Grid.Column="0"  />
+                <ComboBox ItemsSource="{Binding deliveryTypeList,Mode=TwoWay}" Grid.Column="1"  Grid.Row="9" 
+                          VerticalAlignment="Center" Margin="2,0,2,0"  SelectedValuePath="ID" 
+                          DisplayMemberPath="Info" SelectedIndex ="{Binding selectedDeliveryType,Mode=TwoWay}">
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+        <Button Grid.Row="1" Width="50" Content="保存" Command="{Binding ExcuteCommand}"
+                VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,70,0"  IsDefault="True"/>
+        <Button Grid.Row="1" Width="50" Content="取消" Command="{Binding QuitCommand}"
+                VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" IsCancel="True" />
+    </Grid>
+</Window>

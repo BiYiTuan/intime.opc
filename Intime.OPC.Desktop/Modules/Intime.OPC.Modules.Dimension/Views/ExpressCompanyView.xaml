@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="OPCApp.BasicsManage.Views.ExpressCompanyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:Properties="clr-namespace:OPCApp.BasicsManage.Properties"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:c="clr-namespace:OPCApp.BasicsManage.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" d:DesignHeight="300" Width="888">
+    
+    <Grid Background="#FFE5E5E5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260*"/>
+            <ColumnDefinition Width="260*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <ToolBar Grid.ColumnSpan="4" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Top" 
+            Width="{Binding RelativeSource={RelativeSource AncestorType=Grid},Path=ActualWidth}">
+            <Button Content="添加" Command="{Binding AddRowCommand}"/>
+            <Button Content="编辑" Command="{Binding EditRowCommand}"/>
+            <Button Content="删除" Command="{Binding DelectRowCommand}"/>
+        </ToolBar>
+        
+        <StackPanel Orientation="Horizontal" Margin="0,1" Grid.ColumnSpan="2" Grid.Row="1">
+            <Label Content="   快递类型:" Width="80"/>
+            <ComboBox Width="150"  SelectedIndex="0">
+                <ComboBoxItem Content="全部" />
+                <ComboBoxItem Content="顺丰" />
+                <ComboBoxItem Content="韵达" />
+                <ComboBoxItem Content="中通" />
+                <ComboBoxItem Content="申通" />
+                <ComboBoxItem Content="圆通" />
+                <ComboBoxItem Content="EMS" />
+            </ComboBox>
+            <Label Content="   过滤内容:"  Width="80"/>
+            <TextBox Width="150" Controls:TextboxHelper.Watermark="输入过滤内容"
+                     Text="{Binding searchText, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Content="查询"  Width="80" Command="{Binding SearchCommand}"/>
+        </StackPanel>
+        
+        <DataGrid ItemsSource="{Binding expressCompanyGroup, Mode=TwoWay}" Grid.Row="2" AutoGenerateColumns="False" 
+                  RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" 
+                  SelectedIndex="{Binding selectedIndex, Mode=TwoWay}">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.208"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.996"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="快递类型" Binding="{Binding ExpressType}"/>
+                <DataGridTextColumn Header="快递名称" Binding="{Binding ExpressName}"/>
+                <DataGridTextColumn Header="地址" Binding="{Binding Address}"/>
+                <DataGridTextColumn Header="联系人" Binding="{Binding ContractName}"/>
+                <DataGridTextColumn Header="电话" Binding="{Binding ContractPhone}"/>
+                <DataGridTextColumn Header="是否启用" Binding="{Binding IsEnabled}"/>
+                <DataGridTextColumn Header="打印模板" Binding="{Binding PrintTemplate}"/>
+                <DataGridTextColumn Header="合同编号" Binding="{Binding ContractNumber}"/>
+                <DataGridTextColumn Header="配送方式" Binding="{Binding DeliveryType}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

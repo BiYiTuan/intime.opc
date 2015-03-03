@@ -1,0 +1,92 @@
+﻿<controls:MetroWindow x:Class="Intime.OPC.Modules.Authority.Views.OrgAddWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                      Title="机构管理" Height="327.75" Width="466" GlowBrush="Blue" Background="LightGray"
+                      ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Background="LightGray">
+
+                <Button Background="LightGray" Width="Auto" Command="{Binding CancelCommand}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Image/删除.png" Stretch="None" />
+                        <TextBlock FontFamily="宋体" FontSize="18" HorizontalAlignment="Center">取消</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Background="LightGray" Width="Auto" Command="{Binding OKCommand}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Image/保存.png" Stretch="None" />
+                        <TextBlock FontFamily="宋体" FontSize="18" HorizontalAlignment="Center">保存</TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="0" Background="LightGray" Margin="15">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="90" Text="组织机构编码" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <TextBox Foreground="Blue" Width="300" IsEnabled="False" Height="25"
+                                 Text="{Binding Model.OrgID}" />
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0" Background="LightGray" Margin="15">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="90" Text="组织机构名称" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <TextBox Foreground="Blue" Width="300" Height="25" Text="{Binding Model.OrgName}" />
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0" Background="LightGray" Margin="15">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="90" Text="组织机构类型" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <ComboBox x:Name="fileComboBox" Foreground="Blue" Width="300" Height="25"
+                                  ItemsSource="{Binding OrgTypeList}" SelectedValuePath="Key" DisplayMemberPath="Value"
+                                  SelectedValue="{Binding Model.OrgType}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction Command="{Binding OrgTypeChangeCommand}"
+                                                           CommandParameter="{Binding SelectedValue, ElementName=fileComboBox}" />
+                                </i:EventTrigger>
+
+                            </i:Interaction.Triggers>
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="0" Background="LightGray" Margin="15">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="90" Text="关联门店或专柜" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <ComboBox Foreground="Blue" Width="300" Height="25" ItemsSource="{Binding StoreOrSectionList}"
+                                  SelectedValuePath="Key" DisplayMemberPath="Value"
+                                  SelectedValue="{Binding Model.StoreOrSectionID}" />
+                    </StackPanel>
+                    <TextBox Foreground="Blue" Visibility="Hidden" Width="1" IsEnabled="False" Height="25"
+                             Text="{Binding Model.ParentID}" />
+                </Grid>
+
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+
+
+</controls:MetroWindow>

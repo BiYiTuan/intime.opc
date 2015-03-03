@@ -1,0 +1,74 @@
+﻿<controls:MetroWindow x:Class="Intime.OPC.Desktop.Shell"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                        mc:Ignorable="d"
+                        xmlns:prism="http://www.codeplex.com/prism"
+                        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                        xmlns:dialogs="clr-namespace:Intime.OPC.Desktop.Dialogs"
+                        Title="{Binding ApplicationTitle}"
+                        Icon="Resources\Icon.ico"
+                        GlowBrush="{DynamicResource AccentColorBrush}"
+                        d:DesignHeight="300" d:DesignWidth="400" WindowState="Maximized">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LogonCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <controls:MetroWindow.RightWindowCommands>
+        <controls:WindowCommands>
+            <Button Content="{Binding LogoutButtonText}" Command="{Binding LogonCommand}" />
+            <Button Command="{Binding OpenSettingsCommand}" >
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="16" Height="16" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_settings}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="设置..." />
+                </StackPanel>
+            </Button>
+        </controls:WindowCommands>
+    </controls:MetroWindow.RightWindowCommands>
+    <controls:MetroWindow.Flyouts>
+        <controls:FlyoutsControl>
+            <dialogs:Settings Position="Right" Theme="Light" IsModal="True" Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=controls:MetroWindow}, Path=ActualHeight}" />
+        </controls:FlyoutsControl>
+    </controls:MetroWindow.Flyouts>
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="200"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal" Background="LightGray">
+            <Rectangle Margin="30,0,0,0"
+                Width="68"
+                Height="60"
+                Stroke="{x:Null}"
+                StrokeThickness="0">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Resources/Image/Logo.png" ></ImageBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
+                <TextBlock HorizontalAlignment="Center" Margin="10,0,0,0" Width="Auto" FontFamily="微软雅黑" Text="订单处理中心"
+                           FontWeight="Normal" Foreground="Gray" FontSize="32" VerticalAlignment="Center" />
+                <TextBlock HorizontalAlignment="Center" Margin="10,0,0,0" Width="Auto" Text="ORDER PROCESSING CENTER"
+                           FontWeight="Normal" Foreground="Gray" FontSize="13" VerticalAlignment="Center" />
+            </StackPanel>
+        </StackPanel>
+        <Border Grid.Row="1" Grid.Column="0">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden">
+                <ItemsControl x:Name="NavigationItemsControl" prism:RegionManager.RegionName="MainNavigationRegion" />
+            </ScrollViewer>
+        </Border>
+        <GridSplitter Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Stretch" ShowsPreview="True" ResizeDirection="Columns" Width="5"/>
+        <ContentControl Grid.Column="2" Grid.Row="1" Margin="1" prism:RegionManager.RegionName="MainContentRegion"/>
+    </Grid>
+</controls:MetroWindow>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Item Key="-1" Value="全部" />
+	<Item Key="0" Value="进账" />
+	<Item Key="5" Value="退帐" />
+</ArrayOfItem>

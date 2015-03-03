@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Intime.OPC.Modules.CustomerService.Views.ProductImageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        >
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <Image Source="{Binding ImageUrl}" Stretch="None"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

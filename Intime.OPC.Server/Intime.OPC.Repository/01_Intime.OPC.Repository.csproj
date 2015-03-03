@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F89B48C-F608-4C24-968C-2646ACA68D26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intime.OPC.Repository</RootNamespace>
+    <AssemblyName>Intime.OPC.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.95\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit">
+      <HintPath>..\packages\LINQKit.1.1.1\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Base\BaseRespository.cs" />
+    <Compile Include="Base\EFHelper.cs" />
+    <Compile Include="Base\ExtensionEx.cs" />
+    <Compile Include="Base\QueryTableEx.cs" />
+    <Compile Include="Base\StringEx.cs" />
+    <Compile Include="IAssociateRepository.cs" />
+    <Compile Include="IBankRepository.cs" />
+    <Compile Include="IDepartmentRepository.cs" />
+    <Compile Include="IInviteCodeRequestRepository.cs" />
+    <Compile Include="Impl\AssociateRepository.cs" />
+    <Compile Include="Impl\BankRepository.cs" />
+    <Compile Include="Impl\DepartmentRepository.cs" />
+    <Compile Include="Impl\InviteCodeRequestRepository.cs" />
+    <Compile Include="Impl\ShippingOrderRepository.cs" />
+    <Compile Include="Impl\SalesOrderRepository.cs" />
+    <Compile Include="ISaleOrderRepository.cs" />
+    <Compile Include="IShippingOrderRepository.cs" />
+    <Compile Include="ISupplierRepository.cs" />
+    <Compile Include="IBrandRepository.cs" />
+    <Compile Include="IOPCRepository.cs" />
+    <Compile Include="IPaymentMethodRepository.cs" />
+    <Compile Include="IMenuRepository.cs" />
+    <Compile Include="IAccountRepository.cs" />
+    <Compile Include="IOrderItemRepository.cs" />
+    <Compile Include="IOrderRemarkRepository.cs" />
+    <Compile Include="IOrderRepository.cs" />
+    <Compile Include="IOrgInfoRepository.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IRmaDetailRepository.cs" />
+    <Compile Include="IRMARepository.cs" />
+    <Compile Include="IRmaCommentRepository.cs" />
+    <Compile Include="ISaleRmaComment.cs" />
+    <Compile Include="ISaleRMARepository.cs" />
+    <Compile Include="IRoleRepository.cs" />
+    <Compile Include="ISaleDetailRepository.cs" />
+    <Compile Include="ISaleRemarkRepository.cs" />
+    <Compile Include="ISaleRepository.cs" />
+    <Compile Include="ISectionRepository.cs" />
+    <Compile Include="IShippingSaleRepository.cs" />
+    <Compile Include="IShippingSaleCommentRepository.cs" />
+    <Compile Include="IShipViaRepository.cs" />
+    <Compile Include="IStockRepository.cs" />
+    <Compile Include="IStoreRepository.cs" />
+    <Compile Include="ITransRepository.cs" />
+    <Compile Include="IRoleUserRepository.cs" />
+    <Compile Include="Base\OPCBaseRepository.cs" />
+    <Compile Include="Impl\SupplierRepository.cs" />
+    <Compile Include="Support\PaymentMethodRepository.cs" />
+    <Compile Include="Impl\BrandRepository.cs" />
+    <Compile Include="Support\MenuRepository.cs" />
+    <Compile Include="Support\AccountRepository.cs" />
+    <Compile Include="Support\OrderItemRepository.cs" />
+    <Compile Include="Support\OrderRemarkRepository.cs" />
+    <Compile Include="Support\OrderRepository.cs" />
+    <Compile Include="Support\OrgInfoRepository.cs" />
+    <Compile Include="Support\RmaCommentRepository.cs" />
+    <Compile Include="Support\RmaDetailRepository.cs" />
+    <Compile Include="Support\RMARepository.cs" />
+    <Compile Include="Support\RoleMenuRepository.cs" />
+    <Compile Include="Support\RoleRepository.cs" />
+    <Compile Include="Support\RoleUserRepository.cs" />
+    <Compile Include="Support\SaleDetailRepository.cs" />
+    <Compile Include="Support\SaleRemarkRepository.cs" />
+    <Compile Include="Support\SaleRepository.cs" />
+    <Compile Include="Support\SaleRmaCommentRepository.cs" />
+    <Compile Include="Support\SaleRMARepository.cs" />
+    <Compile Include="Impl\SectionRepository.cs" />
+    <Compile Include="Support\ShippingSaleCommentRepository.cs" />
+    <Compile Include="Support\ShippingSaleRepository.cs" />
+    <Compile Include="Support\ShipViaRepository.cs" />
+    <Compile Include="Support\StockRepository.cs" />
+    <Compile Include="Support\StoreRepository.cs" />
+    <Compile Include="Support\TransRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intime.OPC.Common\Intime.OPC.Common.csproj">
+      <Project>{120944ff-a829-4c64-b938-5af79875d747}</Project>
+      <Name>Intime.OPC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intime.OPC.Domain\00_Intime.OPC.Domain.csproj">
+      <Project>{03e03b5b-ead6-4e27-976d-82d15f7396d7}</Project>
+      <Name>00_Intime.OPC.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IRoleMenuRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
